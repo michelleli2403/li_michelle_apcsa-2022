@@ -1,10 +1,10 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
-//Name -
-//Date -
-//Class -
-//Lab  -
+//Name - Michelle Li
+//Date - 1/17/22
+//Class - Period 1
+//Lab  - Variables
 
 public class Variables
 {
