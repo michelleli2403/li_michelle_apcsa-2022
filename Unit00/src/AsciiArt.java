@@ -14,7 +14,7 @@ public class AsciiArt
 		System.out.println("Penguin" );
 		System.out.println("\n\n\n\n" );
 
-		System.out.println("                 ######       ");
+		System.out.println("                 ######*       ");
 		System.out.println("               ##      ##     ");
 		System.out.println("              ##  ^   ^ ##    ");
 		System.out.println("             ##     \\/   ##  ");
