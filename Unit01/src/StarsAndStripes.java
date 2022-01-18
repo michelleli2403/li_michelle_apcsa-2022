@@ -34,19 +34,21 @@ public class StarsAndStripes
    
    public void printASmallBox()
    {	
-	   System.out.println("------");
-	   System.out.println("|    |");
-	   System.out.println("|    |");
-	   System.out.println("------");
+	   System.out.println("********************");
+	   System.out.println("********************");
+	   System.out.println("--------------------");
+	   System.out.println("--------------------");
    }
  
    public void printABigBox()
    { 	
-	   System.out.println("------------");
-	   System.out.println("|          |");
-	   System.out.println("|          |");
-	   System.out.println("|          |");
-	   System.out.println("|          |");
-	   System.out.println("------------");
+	   System.out.println("********************");
+	   System.out.println("********************");
+	   System.out.println("--------------------");
+	   System.out.println("--------------------");
+	   System.out.println("********************");
+	   System.out.println("********************");
+	   System.out.println("--------------------");
+	   System.out.println("--------------------");
    }   
 }
