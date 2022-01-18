@@ -4,7 +4,7 @@
 //Name - Michelle Li
 //Date - 1/16/22
 //Class - period 1
-//Lab  - Ascii Art 
+//Lab  - Ascii Art
 
 public class AsciiArt
 {
