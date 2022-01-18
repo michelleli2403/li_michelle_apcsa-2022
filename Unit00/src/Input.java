@@ -5,12 +5,6 @@
 //Date - 1/17/22
 //Class - Period 1
 //Lab  - Input
-=======
-=======
-//Name -
-//Date -
-//Class -
-//Lab  -
 
 import static java.lang.System.*;
 import java.util.Scanner;
@@ -53,7 +47,6 @@ public class Input
 		
 		System.out.print("Enter a short :: ");
 		shortTwo = keyboard.nextShort();
-		
 
 		System.out.println();
 		System.out.println("integer one = " + intOne );

@@ -2,9 +2,15 @@ eclipse.preferences.version=1
 org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 org.eclipse.jdt.core.compiler.codegen.targetPlatform=17
 org.eclipse.jdt.core.compiler.codegen.unusedLocal=preserve
 org.eclipse.jdt.core.compiler.compliance=17
+=======
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=12
+org.eclipse.jdt.core.compiler.codegen.unusedLocal=preserve
+org.eclipse.jdt.core.compiler.compliance=12
+>>>>>>> 0a6015de497ddc1bc54645304100191f0e210cd9
 =======
 org.eclipse.jdt.core.compiler.codegen.targetPlatform=12
 org.eclipse.jdt.core.compiler.codegen.unusedLocal=preserve
@@ -25,7 +31,11 @@ org.eclipse.jdt.core.compiler.problem.reportPreviewFeatures=warning
 org.eclipse.jdt.core.compiler.release=enabled
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 org.eclipse.jdt.core.compiler.source=17
+=======
+org.eclipse.jdt.core.compiler.source=12
+>>>>>>> 0a6015de497ddc1bc54645304100191f0e210cd9
 =======
 org.eclipse.jdt.core.compiler.source=12
 >>>>>>> 0a6015de497ddc1bc54645304100191f0e210cd9
