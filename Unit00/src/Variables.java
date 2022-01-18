@@ -6,19 +6,19 @@
 //Class - Period 1
 //Lab  - Variables
 
-public class HelloWorld
+public class Variables 
 {
 	public static void main ( String[] args )
 	{
 		//define 1 variable of each of the
-		//following data types
+		//following data types 
 		//byte		short		int 		long
 		//float		double
 		//char      boolean		String
 
 		//integer variables
 		byte byteOne = 127;
-    short shortOne = -32123;
+	short shortOne = -32123;
     int intOne = 90877;
     long longOne = 999999999;
     float floatOne = 38.5678f;
