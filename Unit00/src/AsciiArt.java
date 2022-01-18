@@ -1,29 +1,10 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 //Name - Michelle Li
 //Date - 1/16/22
 //Class - period 1
 //Lab  - Ascii Art 
-=======
-=======
->>>>>>> 0a6015de497ddc1bc54645304100191f0e210cd9
-=======
->>>>>>> 0a6015de497ddc1bc54645304100191f0e210cd9
-//Name -
-//Date -
-//Class -
-//Lab  -
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0a6015de497ddc1bc54645304100191f0e210cd9
-=======
->>>>>>> 0a6015de497ddc1bc54645304100191f0e210cd9
-=======
->>>>>>> 0a6015de497ddc1bc54645304100191f0e210cd9
 
 public class AsciiArt
 {
