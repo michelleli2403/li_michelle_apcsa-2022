@@ -43,17 +43,17 @@ public class HelloWorld
 		System.out.println("*        integer types          *");
 		System.out.println("*                               *");
 		System.out.println("*8 bit - byteOne = " + byteOne + "\t\t*");
-    System.out.println("*16 bit - shortOne = " + shortOne + "\t*");
-    System.out.println("*32 bit - intOne = " + intOne + "\t*");
-    System.out.println("*64 bit - longOne = " + longOne + "\t*");
-    System.out.println("*                               *");
-    System.out.println("*         real types            *");
-    System.out.println("*32 bit - floatOne = " + floatOne + "\t*");
-    System.out.println("*64 bit - doubleOne = " + doubleOne + "\t*");
-    System.out.println("*         other types           *");
-    System.out.println("*booleanOne = " + booleanOne + "\t\t*");
-    System.out.println("*stringOne = " + stringOne + "\t*");
-    System.out.println("/////////////////////////////////");
+	    System.out.println("*16 bit - shortOne = " + shortOne + "\t*");
+	    System.out.println("*32 bit - intOne = " + intOne + "\t*");
+	    System.out.println("*64 bit - longOne = " + longOne + "\t*");
+	    System.out.println("*                               *");
+	    System.out.println("*         real types            *");
+	    System.out.println("*32 bit - floatOne = " + floatOne + "\t*");
+	    System.out.println("*64 bit - doubleOne = " + doubleOne + "\t*");
+	    System.out.println("*         other types           *");
+	    System.out.println("*booleanOne = " + booleanOne + "\t\t*");
+	    System.out.println("*stringOne = " + stringOne + "\t*");
+	    System.out.println("/////////////////////////////////");
 
 
 
