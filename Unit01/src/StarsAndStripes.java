@@ -38,6 +38,8 @@ public class StarsAndStripes
 	   System.out.println("********************");
 	   System.out.println("--------------------");
 	   System.out.println("--------------------");
+	   System.out.println("********************");
+	   System.out.println("********************");
    }
  
    public void printABigBox()
@@ -49,6 +51,10 @@ public class StarsAndStripes
 	   System.out.println("********************");
 	   System.out.println("********************");
 	   System.out.println("--------------------");
+	   System.out.println("--------------------");
+	   System.out.println("********************");
+	   System.out.println("--------------------");
+	   System.out.println("********************");
 	   System.out.println("--------------------");
    }   
 }

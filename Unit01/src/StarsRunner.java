@@ -15,6 +15,12 @@ public class StarsRunner
       //instantiate a StarsAndStripes object
       
       //call the methods needed to make the patterns on the word document
-      
+      StarsAndStripes pattern = new StarsAndStripes();
+      pattern.printTwentyStars();
+      pattern.printTwentyDashes();
+      pattern.printTwoBlankLines();
+      pattern.printASmallBox();
+      pattern.printTwoBlankLines();
+      pattern.printABigBox();
    }
 }
