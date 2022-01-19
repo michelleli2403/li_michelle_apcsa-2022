@@ -11,7 +11,7 @@ public class AsciiArt
 	public static void main ( String[] args )
 	{
 		System.out.println("Michelle Li \n\n" );
-		System.out.println("Penguinn" );
+		System.out.println("Penguin" );
 		System.out.println("\n\n\n\n" );
 
 		System.out.println("                 ######       ");
