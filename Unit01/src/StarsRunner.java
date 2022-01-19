@@ -1,10 +1,10 @@
 //© A+ Computer Science
 //www.apluscompsci.com
 
-//Name -
-//Date -
-//Class -
-//Lab  -
+//Name - Michelle Li
+//Date - 1/18/22
+//Class - Period 1
+//Lab  - StarsAndStripes
 
 import static java.lang.System.*;
 
