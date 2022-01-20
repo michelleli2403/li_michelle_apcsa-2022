@@ -1,8 +1,8 @@
 //© A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  - 
+//Name - Michelle Li
+//Date - 1/20/22
+//Class - Period 1
+//Lab  -  Line
 
 public class LineRunner
 {
@@ -14,6 +14,8 @@ public class LineRunner
 		System.out.printf( "Slope is :: %.2f\n" , Line.getSlope( 4,4,5,3 ) );
 		System.out.printf( "Slope is :: %.2f\n" , Line.getSlope( 1,1,2,9 ) );
 		System.out.printf( "Slope is :: %.2f\n" , Line.getSlope( 1,7,2,9 ) );
-		
+		System.out.printf( "Slope is :: %.2f\n" , Line.getSlope( 1,7,2,9 ) );
+		System.out.printf( "Slope is :: %.2f\n" , Line.getSlope(1, 1, 2, 1));
+
 	}
 }

@@ -1,7 +1,7 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name -
-//Date -
+//Name - Michelle Li
+//Date - 1/20/22
 
 public class CubeRunner
 {
@@ -14,6 +14,7 @@ public class CubeRunner
 		System.out.println( "Cube area is :: " + Cube.area( 5 ) );		
 		System.out.println( "Cube area is :: " + Cube.area( 19 ) );
 		System.out.println( "Cube area is :: " + Cube.area( 111 ) );
+		System.out.println( "Cube area is :: " + Cube.area( 2 ) );
 
 	}
 }

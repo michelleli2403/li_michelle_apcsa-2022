@@ -1,7 +1,7 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name -
-//Date -
+//Name - Michelle Li
+//Date - 1/20/22
 
 public class Line
 {
