@@ -1,8 +1,8 @@
 //© A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  - 
+//Name - Michelle Li
+//Date - 1/20/22
+//Class - Period 1
+//Lab  - Trap
 
 public class TrapRunner
 {
