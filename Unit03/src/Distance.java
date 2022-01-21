@@ -1,10 +1,10 @@
 //(c) A+ Computer Science 
 //www.apluscompsci.com
 
-//Name -
-//Date -
-//Class -
-//Lab  -
+//Name - Michelle Li
+//Date - 1/20/22
+//Class - Period 1
+//Lab  - Distance
 
 import java.util.Scanner; 
 import static java.lang.System.*;
