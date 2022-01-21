@@ -15,6 +15,7 @@ public class DistanceRunner
 	public static void main( String[] args )
 	{
 		//add test cases	
+		System.out.printf("Distance is :: %.3f\n", Distance.getDistance(1,1,2,1));
 			
 	}
 }
