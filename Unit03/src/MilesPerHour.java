@@ -56,7 +56,6 @@ public class MilesPerHour
 		System.out.printf("%.2f", minutes);
 		System.out.print(" minutes = ");
 		System.out.printf("%.2f", mph);
-		System.out.print(" MPH.");
-		System.out.print("\n\n");
+		System.out.print(" MPH. \n\n");
 	}
 }
