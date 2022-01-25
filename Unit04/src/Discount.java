@@ -1,7 +1,7 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
-//Name - 
+//Name - Michelle Li
 //Date -
 //Class -
 //Lab  -
@@ -12,11 +12,42 @@ import java.util.Scanner;
 public class Discount
 {
 	//instance variables and constructors could be used, but are not really needed
-	
 	//getDiscountedBill() will return final amount of the bill
 	//			if the bill is >2000, the bill receives a 15% discount
 	public static double getDiscountedBill(double bill)
 	{
-		return 0;
+		if (bill <= 2000) {
+			return bill;
+		}
+		else {
+			bill *= 0.85;
+			return bill;
+		}
 	}
 }
+
+/* using a constructor:
+
+import java.util.Scanner;
+
+public class Discount
+{
+	private double bill; 
+	public Discount(double finalBill) {
+		bill = finalBill;
+	}
+	
+	public static double getDiscountedBill(double bill)
+	{
+		if (bill <= 2000) {
+			return bill;
+		}
+		else {
+			bill *= 0.85;
+			return bill;
+		}
+	}
+	public double getter() {
+		return bill; 
+	}
+}*/

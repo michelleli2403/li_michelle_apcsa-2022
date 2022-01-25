@@ -17,7 +17,24 @@ public class DiscountRunner
 		
 		out.print("Enter the original bill amount :: ");
 		double amt = keyboard.nextDouble();
-		
+		out.printf("Bill after discount :: %.2f", Discount.getDiscountedBill(amt));
 
 	}
 }
+
+/* using a constructor
+
+public class DiscountRunner
+{
+	public static void main( String args[] )
+	{
+		Scanner keyboard = new Scanner(System.in);
+		Discount myFinalBill = new Discount(5000);
+		
+		//out.print("Enter the original bill amount :: ");
+		//double amt = keyboard.nextDouble();
+		out.printf("Bill after discount :: %.2f", myFinalBill.getDiscountedBill(myFinalBill.getter()));
+
+	}
+}*/
+
