@@ -7,6 +7,6 @@ public class Circle
 {
 	public static double area( double radius )
 	{
-		return 0;
+		return 3.14159*radius*radius;
 	}
 }

@@ -3,16 +3,16 @@
 //Name -
 //Date -
 
-/*public class Rect
+public class Rect
 {
-	public static double perimeter( int length, int width )
-	{
-		return 2*length + 2*width;
+	private int length;
+	private int width;
+	public Rect(int rectLength, int rectWidth) {
+		length = rectLength;
+		width = rectWidth;
 	}
-}*/
-
-public class Rect {
-	public static double perimeter(int length, int width) {
-		return 2*length + 2*width;
+	public double perimeter()
+	{
+		return 2*length+2*width;
 	}
 }

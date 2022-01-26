@@ -4,10 +4,20 @@
 //Class -
 //Lab  - 
 
-public class Cone
+import java.lang.Math;
+
+/*public class Cone
 {
 	public static double volume( double radius, int height)
 	{		
-		return 0;
+		return ((double)1/3)*Math.pow(radius, 2)*height*3.14159;
+	}
+}*/
+
+public class Cone
+{
+	public static double volume(double radius, int height)
+	{
+		return ((double)1/3)*Math.pow(radius, 2)*height*3.14159;
 	}
 }
