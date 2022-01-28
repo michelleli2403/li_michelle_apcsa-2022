@@ -34,6 +34,7 @@ public class DiscountRunner
 		//out.print("Enter the original bill amount :: ");
 		//double amt = keyboard.nextDouble();
 		out.printf("Bill after discount :: %.2f", myFinalBill.getDiscountedBill(myFinalBill.getter()));
+		out.printf(Discount.getDiscountedBill(5000));
 
 	}
 }*/
