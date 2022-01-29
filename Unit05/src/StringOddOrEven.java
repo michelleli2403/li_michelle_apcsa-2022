@@ -40,7 +40,11 @@ public class StringOddOrEven
 
  	public String toString()
  	{
- 		String output= word + " is " + isEven();
- 		return output;
+ 		if (isEven()) {
+ 			return word + " is even.";
+ 		}
+ 		else {
+ 			return word + " is odd.";
+ 		}
 	}
 }
