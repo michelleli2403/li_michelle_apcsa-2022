@@ -25,9 +25,9 @@ public class StringRunner
 		StringOddOrEven test = new StringOddOrEven(word);
 		test.setString(word);
 		StringOddOrEven test2 = new StringOddOrEven(word2);
-		test.setString(word2);
+		test2.setString(word2);
 		StringOddOrEven test3 = new StringOddOrEven(word3);
-		test.setString(word3);
+		test3.setString(word3);
 		
 		System.out.println(test);
 		System.out.println(test2);
