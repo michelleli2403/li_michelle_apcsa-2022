@@ -22,8 +22,15 @@ public class StringRunner
 		System.out.println("Enter a word :: ");
 		String word3 = keyboard.next();
 		
-		StringOddOrEven test = new StringOddOrEven();
+		StringOddOrEven test = new StringOddOrEven(word);
 		test.setString(word);
+		StringOddOrEven test2 = new StringOddOrEven(word2);
+		test.setString(word2);
+		StringOddOrEven test3 = new StringOddOrEven(word3);
+		test.setString(word3);
 		
+		System.out.println(test);
+		System.out.println(test2);
+		System.out.println(test3);
 	}
 }
