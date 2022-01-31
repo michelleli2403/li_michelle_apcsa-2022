@@ -22,7 +22,7 @@ public class WordsCompare
 
 	public WordsCompare(String one, String two)
 	{
-		setWords(wordOne,wordTwo);
+		setWords(one,two);
 	}
 
 	public void setWords(String one, String two)

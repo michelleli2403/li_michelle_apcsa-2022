@@ -37,11 +37,11 @@ public class WordsCompareRunner
 	   test6.setWords("193", "1910");
 	   System.out.println(test6);
 	   
-	   WordsCompare test7 = new WordsCompare("goofy","godfather");
+	   WordsCompare test7 = new WordsCompare();
 	   test7.setWords("goofy", "godfather");
 	   System.out.println(test7);
 	   
-	   WordsCompare test8 = new WordsCompare("funnel","fun");
+	   WordsCompare test8 = new WordsCompare();
 	   test8.setWords("funnel", "fun");
 	   System.out.println(test8);
 	   
