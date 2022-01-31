@@ -44,7 +44,7 @@ public class StringOddOrEven
  			return word + " is even.";
  		}
  		else {
- 			return word + "  is odd.";
+ 			return word + " is odd.";
  		}
 	}
 }
