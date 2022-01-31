@@ -28,7 +28,7 @@ public class StringOddOrEven
 		word = s;
 	}
 
- 	public boolean isEven()
+ 	public boolean isEven() 
  	{
  		if (word.length()%2==0) {
  			return true;
@@ -44,7 +44,7 @@ public class StringOddOrEven
  			return word + " is even.";
  		}
  		else {
- 			return word + " is odd.";
+ 			return word + "  is odd.";
  		}
 	}
 }
