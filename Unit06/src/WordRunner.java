@@ -8,6 +8,9 @@ public class WordRunner
 {
 	public static void main ( String[] args )
 	{
-		//add test cases		
+		//add test cases
+		WordRunner word = new WordRunner();
+		word.setString();
+		System.out.println()
 	}
 }
