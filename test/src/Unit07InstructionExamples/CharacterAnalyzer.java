@@ -16,7 +16,7 @@ public class CharacterAnalyzer
 
 	public CharacterAnalyzer()
 	{
-		theChar = ' ';
+		setChar(' ');
 	}
 
 	public CharacterAnalyzer(char c)
