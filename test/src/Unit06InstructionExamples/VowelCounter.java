@@ -9,6 +9,7 @@ public class VowelCounter
 {
 	public static String getNumberString( String s)
 	{
+		
 		return "";
 	}
 }

@@ -9,6 +9,13 @@ public class MultTens
 {
 	public static String go(  int x )
 	{
-		return "code goes here";
+		String s = "";
+		if (x<=0) {
+			return "aplus";
+		}
+		for (int i=1; i<x+1; i++) {
+			s = s+i*10;
+		}
+		return s;
 	}
 }
