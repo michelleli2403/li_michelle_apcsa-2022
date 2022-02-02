@@ -1,4 +1,4 @@
-package Unit07InstructionExamples;
+package Unit05InstructionExamples;
 import static java.lang.System.*;
 
 public class EndsWith {
