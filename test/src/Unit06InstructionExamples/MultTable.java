@@ -25,12 +25,6 @@ public class MultTable
 		number=num;
 		stop=end;
 	}
-	
-	/*public int multiply() {
-		for (int i=1; i<=stop; i++) {
-			
-		}
-	}*/
 
 	public void printTable( )
 	{
