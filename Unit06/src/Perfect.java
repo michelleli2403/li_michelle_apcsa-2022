@@ -24,15 +24,27 @@ public class Perfect
 
 	public boolean isPerfect()
 	{
-		int divisor=0;
-		int sum=0;
-		/*while (divisor<number-1) {
+		int sumDiv=0;
+		for (int i=1; i<number; i++) {
+			if (number%i==0) {
+				sumDiv+=i;
+			}
+		}
+		if (sumDiv==number) {
+			return true;
+		}
+		return false;
+		
+		/* while loop:
+		 while (divisor<number-1) {
 			divisor++;
 			if (number%divisor==0) {
 				sum+=divisor;
 			}
-		}*/
-		do {
+		}
+		
+		/* do while loop:
+		 do {
 			divisor++;
 			if (number%divisor==0) {
 				sum+=divisor;
@@ -41,7 +53,7 @@ public class Perfect
 		if (sum==number) {
 			return true;
 		}
-		return false;
+		return false;*/
 	}
 
 	//add a toString	

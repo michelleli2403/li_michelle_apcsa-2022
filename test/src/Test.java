@@ -4,11 +4,9 @@ import static java.lang.Math.*;
 public class Test
 {
 	public static void main(String[] args) {
-		String s = "compsci";
-		for(char a : s.toCharArray())
-		{
-		    out.println(a);
-		}
+		String s = "a";
+		System.out.println(s.substring(0,-1));
+
 
 	}
 }
