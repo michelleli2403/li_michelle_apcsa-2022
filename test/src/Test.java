@@ -4,7 +4,7 @@ import static java.lang.Math.*;
 public class Test
 {
 	public static void main(String[] args) {
-		int total=9, num=13;
+		/*int total=9, num=13;
 
 
 		if (total<4 ||(++num>15 && total>0))  
@@ -15,7 +15,16 @@ public class Test
 		//boolean b = total>4||(++num>15&&total>0);
 		//boolean c = ++num>15&&total>0 || total>4;
 		//System.out.println(num);
-		//System.out.println(72/2/3);
+		//System.out.println(72/2/3);*/
+		
+		    public int x = 0;
+		    public int y = 0;
+		        
+		    //constructor
+		    public Test(int x, int y) {
+		        this.x = x;
+		        this.y = y;
+		    }
 
 
 	}
