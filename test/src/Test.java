@@ -4,14 +4,18 @@ import static java.lang.Math.*;
 public class Test
 {
 	public static void main(String[] args) {
-		int var1 = 0;
-		int var2 = 2;
+		int total=9, num=13;
 
-		while (((var1 / var2) >= 0)&&(var2 != 0))
+
+		if (total<4 ||(++num>15 && total>0))  
 		{
-		   var1 = var1 + 1;
-		   var2 = var2 -1;
+		     out.println("short");
 		}
+		out.println(num);
+		//boolean b = total>4||(++num>15&&total>0);
+		//boolean c = ++num>15&&total>0 || total>4;
+		//System.out.println(num);
+		//System.out.println(72/2/3);
 
 
 	}
