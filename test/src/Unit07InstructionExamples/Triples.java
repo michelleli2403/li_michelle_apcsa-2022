@@ -1,6 +1,7 @@
+package Unit07InstructionExamples;
 //(c) A+ Computer Science
-// www.apluscompsci.com
-//Name -  
+//www.apluscompsci.com
+//Name -
 
 import static java.lang.System.*;
 
@@ -15,31 +16,21 @@ public class Triples
 
 	public Triples(int num)
 	{
-		setNum(num);
 	}
 
 	public void setNum(int num)
 	{
-		number=num;
 	}
 	
 	private int greatestCommonFactor(int a, int b, int c)
 	{
 		int max = 0;
-
-
 		return 1;
 	}
 
 	public String toString()
 	{
 		String output="";
-
-
-
-
-
-
 		return output+"\n";
 	}
 }

@@ -5,15 +5,15 @@ import static java.lang.Math.*;
 public class Test
 {
 	public static void main(String[] args) {
-		Scanner keyboard = new Scanner(System.in);
-		
-		out.print("Enter a list of integers :: ");
-		String input = kb.nextLine();
-		Scanner chopper = new Scanner(input);
-		while (chopper.hasNextInt()) 
+	
+		int cnt=0;
+		for(int run=1; run<=20; run++)
 		{
-		     out.println(chopper.nextInt());
-		}	
+		     if(run%3==0)
+		        continue;
+		     cnt++;
+		}
+		System.out.println(cnt);
 
 
 	}
