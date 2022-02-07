@@ -15,20 +15,17 @@ public class Triples
 
 	public Triples(int num)
 	{
-
-
+		setNum(num);
 	}
 
 	public void setNum(int num)
 	{
-
-
+		number=num;
 	}
 	
 	private int greatestCommonFactor(int a, int b, int c)
 	{
 		int max = 0;
-
 
 
 		return 1;
