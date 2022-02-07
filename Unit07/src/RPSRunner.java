@@ -14,13 +14,21 @@ public class RPSRunner
 		
 		//add in a do while loop after you get the basics up and running
 		
-			String player = "";
+			char player = ' ';
 		
-			out.print("type in your prompt [R,P,S] :: ");
+			out.print("Rock-Paper-Scissors - pick your weapon[R,P,S] :: ");
 			
 			//read in the player value
-		
+			player = keyboard.next().charAt(0);
+			keyboard.nextLine();
+			player = Character.toUpperCase(player);
+			
 			RockPaperScissors game = new RockPaperScissors();		
+			//System.out.println("player had " + response);
+			game.setPlayers(player);
+			System.out.println(game);
+			
+			
 	}
 }
 
