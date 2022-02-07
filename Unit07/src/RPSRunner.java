@@ -31,7 +31,7 @@ public class RPSRunner {
 			System.out.print("\n");
 		} while (response == 'y');
 		
-		System.out.println("Thank you for playing!");
+		System.out.print("Thank you for playing!");
 
 	}
 }
