@@ -22,26 +22,53 @@ public class RockPaperScissors
 
 	public void setPlayers(char player)
 	{
-		System.out.println("player had " + player);
+		playChoice = player;
+		
+		//System.out.println("player had " + playChoice);
+		
 		int random = (int)Math.floor(Math.random()*3);
-		char compChoice = ' ';
 		switch (random) {
 			case 0 : compChoice = 'R'; break;
 			case 1 : compChoice = 'P'; break;
 			case 2 : compChoice = 'S'; break;
 		}
-		System.out.println("computer had " + compChoice);
+		//System.out.println("computer had " + compChoice);
 	}
 
 	public String determineWinner()
 	{
-		String winner="";
-		return winner;
+		//String winner="";
+		if (compChoice == playChoice) {
+			return "!Draw Game!";
+		}
+		else if (compChoice=='R' && playChoice=='S') {
+			return "!Computer wins <<Rock Break Scissors>>!";
+		}
+		else if (compChoice=='R' && playChoice=='P') {
+			return "!Player wins <<Paper Covers Rock>>!";
+		}
+		else if (compChoice=='P' && playChoice=='R') {
+			return "!Computer wins <<Paper Covers Rock>>!";
+		}
+		else if (compChoice=='P' && playChoice=='S') {
+			return "!Player wins <<Scissors Cuts Paper>>!";
+		}
+		else if (compChoice=='S'&&playChoice=='R') {
+			return "!Player wins <<Rock Breaks Scissors>>!";
+		}
+		else if (compChoice=='S' && playChoice=='P'){
+			return "!Computer wins <<Scissors Cuts Paper>>!";
+		}
+		else {
+			return "Please enter R, P, or S";
+		}
+		
+		//return winner;
 	}
 
 	public String toString()
 	{
-		String output="";
+		String output= "player had " + playChoice + "\n" + "computer had " + compChoice + "\n" + determineWinner() + "\n";
 		return output;
 	}
 }
