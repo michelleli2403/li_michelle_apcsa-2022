@@ -22,7 +22,6 @@ public class RPSRunner {
 			player = Character.toUpperCase(player);
 
 			RockPaperScissors game = new RockPaperScissors();
-			// System.out.println("player had " + response);
 			game.setPlayers(player);
 			System.out.println(game);
 

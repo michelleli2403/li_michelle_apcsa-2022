@@ -6,15 +6,7 @@ public class Test
 {
 	public static void main(String[] args) {
 	
-		int cnt=0;
-		for(int run=1; run<=20; run++)
-		{
-		     if(run%3==0)
-		        continue;
-		     cnt++;
-		}
-		System.out.println(cnt);
-
-
+		char c = 'D';
+		System.out.println((int)c);
 	}
 }

@@ -24,20 +24,16 @@ public class RockPaperScissors
 	{
 		playChoice = player;
 		
-		//System.out.println("player had " + playChoice);
-		
 		int random = (int)Math.floor(Math.random()*3);
 		switch (random) {
 			case 0 : compChoice = 'R'; break;
 			case 1 : compChoice = 'P'; break;
 			case 2 : compChoice = 'S'; break;
 		}
-		//System.out.println("computer had " + compChoice);
 	}
 
 	public String determineWinner()
 	{
-		//String winner="";
 		if (compChoice == playChoice) {
 			return "!Draw Game!";
 		}
@@ -62,8 +58,6 @@ public class RockPaperScissors
 		else {
 			return "Please enter R, P, or S";
 		}
-		
-		//return winner;
 	}
 
 	public String toString()
