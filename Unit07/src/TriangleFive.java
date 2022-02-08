@@ -34,26 +34,28 @@ public class TriangleFive
 	public String makeTri() {
 		String output="";
 		char changeLetter = letter;
-		String changeOutput = output;
-		int index = 0;
-		int smaller = amount;
+		//String changeOutput = output;
+		String smaller = output;
 		for (int k=amount; k>=1; k--) {
 			for (int i=amount; i>=1; i--) {
 				for (int j=1; j<=i; j++) {
-					changeOutput+=changeLetter;
+					output+=changeLetter;
 				}
 				changeLetter++;
-				changeOutput+=" ";
+				output+=" ";
+				
 			}
-			//index = output.charAt(k);
-			changeOutput+="\n";
+			output+="\n";
 			changeLetter=letter;
-			output=changeOutput.substring(0,changeOutput.lastIndexOf(' '));
+			//System.out.println(k);
+			smaller=output.substring(0,k*3-1);
+			System.out.println(smaller);
 			//changeOutput=output;
 			//output=output.substring(0,output.length()-1);
 			//System.out.println(output.lastIndexOf(' '));
 			
 		}
+		//output=output.substring(0,9);
 
 		return output;
 		
