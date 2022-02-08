@@ -30,28 +30,37 @@ public class TriangleFive
 	{
 		amount=amt;
 	}
-
-	public String toString()
-	{
+	
+	public String makeTri() {
 		String output="";
+		char changeLetter = letter;
+		String changeOutput = output;
 		int index = 0;
+		int smaller = amount;
 		for (int k=amount; k>=1; k--) {
 			for (int i=amount; i>=1; i--) {
 				for (int j=1; j<=i; j++) {
-					output+=letter;
+					changeOutput+=changeLetter;
 				}
-				letter++;
-				output+=" ";
+				changeLetter++;
+				changeOutput+=" ";
 			}
-			index = output.charAt(k);
-			output+="\n";
-			System.out.println(output.lastIndexOf(' '));
-			/*while (index!=' ') {
-				output+=letter;
-			}*/
+			//index = output.charAt(k);
+			changeOutput+="\n";
+			changeLetter=letter;
+			output=changeOutput.substring(0,changeOutput.lastIndexOf(' '));
+			//changeOutput=output;
+			//output=output.substring(0,output.length()-1);
+			//System.out.println(output.lastIndexOf(' '));
 			
 		}
 
 		return output;
+		
+	}
+
+	public String toString()
+	{
+		return makeTri();
 	}
 }
