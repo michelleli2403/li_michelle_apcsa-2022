@@ -12,10 +12,25 @@ class PasswordCheck
 
 	public PasswordCheck()
 	{
+		password="hello";
 	}
 
 	public void check()
 	{
+		String guess="";
 		Scanner keyboard = new Scanner(System.in);
+		do {
+			System.out.print("Enter the password :: ");
+			guess=keyboard.next();
+			
+			if (guess.equals(password)) {
+				System.out.println("VALID");
+			}
+			
+			else {
+				System.out.println("INVALID");
+			}
+		}while (!(guess.equals(password)));
+		
 	}
 }

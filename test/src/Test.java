@@ -5,19 +5,18 @@ import static java.lang.Math.*;
 public class Test
 {
 	public static void main(String[] args) {
-	
-		int result;
-		int result2;
-		int i = 0;
-		int j = 0;
-		
-		result=i++;
-		System.out.println(result);
-		
-		result2=++j;
-		System.out.println(result2);
+		int x=7;
+		out.println(x++);
+		out.println(x);
+		x=9;
+		out.println(++x);
+		out.println(x);
+		x=11;
+		out.println(--x);
+		x=6;
+		out.println(x--);
 
-		
+
 
 	}
 }

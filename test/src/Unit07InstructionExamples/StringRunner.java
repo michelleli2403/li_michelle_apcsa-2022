@@ -10,6 +10,11 @@ public class StringRunner
 	public static void main(String args[])
 	{
 		//add test cases
+		BiggestString test = new BiggestString("abc","cba","bca");
+		System.out.println(test);
+		
+		test.setStrings("one","fourteen", "twenty");
+		System.out.println(test);
 
 	}
 }

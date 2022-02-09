@@ -12,5 +12,11 @@ public class GuessRunner
 	{
 		Scanner keyboard = new Scanner(System.in);
 		char response;
+		int number;
+		
+		/*do {
+			System.out.println("Guessing Game - how many numbers?");
+			number = keyboard.nextInt();
+		}while (number!=random);*/
 	}
 }
