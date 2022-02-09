@@ -58,12 +58,12 @@ import static java.lang.System.*;
 }*/
 
 public class Triples {
-	private int number;
-	private int a;
-	private int b;
-	private int c;
+	private int number=0;
+	private int a=0;
+	private int b=0;
+	private int c=0;
 	public Triples() {
-		this(0);
+		setNum(0);
 	}
 	
 	public Triples(int num) {
@@ -74,7 +74,7 @@ public class Triples {
 		number=num;
 	}
 	
-	public String findTriple() {
+	public String makeTri() {
 		String total="";
 		for (int i=1; i<=number; i++) {
 			for (int j=i+1; j<=number; j++) {
@@ -84,7 +84,7 @@ public class Triples {
 						b=j;
 						c=k;
 						if (greatestCommonFactor()==1) {
-							total+=a + " " + b + " " + c + "\n";
+							total+=a+" "+b+" "+c+"\n";
 						}
 					}
 				}
@@ -104,6 +104,6 @@ public class Triples {
 	}
 	
 	public String toString() {
-		return findTriple();
+		return makeTri();
 	}
 }
