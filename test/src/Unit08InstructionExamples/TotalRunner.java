@@ -21,7 +21,8 @@ public class TotalRunner
 		System.out.println( rt.go( new int[]{9,8,7,6,5,4,3,2,0,-2,-989} ) );
 		System.out.println( rt.go( new int[]{12,15,18,21,23,1000} ) );
 		System.out.println( rt.go( new int[]{250,19,17,15,13,11,10,9,6,3,2,1,-455} ) );	
-		System.out.println( rt.go( new int[]{9,10,-8,10000,-5000,1000} ) );											
+		System.out.println( rt.go( new int[]{9,10,-8,10000,-5000,1000} ) );
+		
 	}
 }
 

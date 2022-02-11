@@ -8,6 +8,12 @@ public class RaySmallest
 {
 	public static int go(int[] ray)
 	{
-		return 0;
+		int smallest=ray[0];
+		for (int i=0; i<ray.length; i++) {
+			if (ray[i]<smallest) {
+				smallest=ray[i];
+			}
+		}
+		return smallest;
 	}
 }
