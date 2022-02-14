@@ -11,7 +11,8 @@ public class Deck {
 	/**
 	 * cards contains all the cards in the deck.
 	 */
-	private List<Card> cards;
+	// private List<Card> cards;
+	private Card[] cards;
 
 	/**
 	 * size is the number of not-yet-dealt cards.
@@ -40,6 +41,9 @@ public class Deck {
 	 */
 	public boolean isEmpty() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		
+		//m - delete this
+		return false;
 	}
 
 	/**
@@ -48,6 +52,9 @@ public class Deck {
 	 */
 	public int size() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		
+		//m - delete this
+		return 0;
 	}
 
 	/**
@@ -63,9 +70,11 @@ public class Deck {
 	 * @return the card just dealt, or null if all the cards have been
 	 *         previously dealt.
 	 */
-	public Card deal() {
+	//m - UNCOMMENT LINES BELOW:
+	//public Card deal() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-	}
+		
+	//}
 
 	/**
 	 * Generates and returns a string representation of this deck.
