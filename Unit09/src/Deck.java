@@ -85,7 +85,8 @@ public class Deck {
 		String rtn = "size = " + size + "\nUndealt cards: \n";
 
 		for (int k = size - 1; k >= 0; k--) {
-			rtn = rtn + cards.get(k);
+			// m - uncomment line below
+			//rtn = rtn + cards.get(k);
 			if (k != 0) {
 				rtn = rtn + ", ";
 			}
@@ -95,6 +96,8 @@ public class Deck {
 			}
 		}
 
+
+/* m - uncomment!
 		rtn = rtn + "\nDealt cards: \n";
 		for (int k = cards.size() - 1; k >= size; k--) {
 			rtn = rtn + cards.get(k);
@@ -106,7 +109,7 @@ public class Deck {
 				rtn = rtn + "\n";
 			}
 		}
-
+*/
 		rtn = rtn + "\n";
 		return rtn;
 	}
