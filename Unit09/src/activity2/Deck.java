@@ -35,7 +35,7 @@ public class Deck {
 	 * @param values is an array containing all of the card point values.
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
-		int 
+		 
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
 		for (int i=0; i<ranks.length; i++) {
 			
@@ -50,8 +50,7 @@ public class Deck {
 	public boolean isEmpty() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
 		
-		//m - delete this
-		return false;
+		return size==0;  //testing something other than this, the conditional is not correct
 	}
 
 	/**
@@ -61,8 +60,7 @@ public class Deck {
 	public int size() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
 		
-		//m - delete this
-		return 0;
+		return size;
 	}
 
 	/**

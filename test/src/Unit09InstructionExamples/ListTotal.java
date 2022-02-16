@@ -1,3 +1,4 @@
+package Unit09InstructionExamples;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 //Name -
@@ -6,10 +7,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListLast
+public class ListTotal
 {
-	public static boolean go(List<Integer> ray)
+	public static int go( List<Integer> ray )
 	{
-		return true;
+		return 0;
 	}
 }
