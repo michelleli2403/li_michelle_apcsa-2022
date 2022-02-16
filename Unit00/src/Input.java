@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
@@ -5,9 +7,6 @@
 //Date - 1/17/22
 //Class - Period 1
 //Lab  - Input
-
-import static java.lang.System.*;
-import java.util.Scanner;
 
 public class Input
 {

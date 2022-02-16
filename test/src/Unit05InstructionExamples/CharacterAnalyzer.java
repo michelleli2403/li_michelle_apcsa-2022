@@ -82,5 +82,3 @@ public class CharacterAnalyzer
 		}
 	}
 }
-
-//line 23 is that right and why
