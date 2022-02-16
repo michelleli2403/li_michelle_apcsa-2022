@@ -1,4 +1,8 @@
+package activity2;
 import java.util.List;
+
+import activity1.Card;
+
 import java.util.ArrayList;
 
 /**
@@ -31,7 +35,11 @@ public class Deck {
 	 * @param values is an array containing all of the card point values.
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
+		int 
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		for (int i=0; i<ranks.length; i++) {
+			
+		}
 	}
 
 

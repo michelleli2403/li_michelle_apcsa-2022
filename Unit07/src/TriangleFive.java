@@ -52,9 +52,8 @@ public class TriangleFive
 			changeLetter=letter;
 		}
 		return output;
-		
 	}
-
+	
 	public String toString()
 	{
 		return makeTri();
