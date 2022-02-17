@@ -37,9 +37,17 @@ public class Deck {
 	public Deck(String[] ranks, String[] suits, int[] values) {
 		 
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		cards=new Card[ranks.length*suits.length];
+		System.out.println(ranks.length+" "+suits.length+" "+values.length);
 		for (int i=0; i<ranks.length; i++) {
-			
+			for (int j=0; j<suits.length; j++) {
+				int cardIndex=(suits.length)*i+j;
+				System.out.println(i+" "+j+" "+cardIndex);
+				cards[cardIndex]=new Card(ranks[i],suits[j],values[i]);
+			}
 		}
+		size = cards.length;
+		shuffle();
 	}
 
 
