@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 //(c) A+ Computer Science
 //www.apluscompsci.com
 //Name -
@@ -6,6 +9,8 @@
 public class SumFirstRunner
 {
 	public static void main( String args[] )
-	{										
+	{
+		List<Integer> ray = new ArrayList<Integer>();
+		System.out.println(ListSumFirst.go(ray));
 	}
 }
