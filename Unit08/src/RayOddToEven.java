@@ -46,7 +46,7 @@ public class RayOddToEven
 	private int[] ray;
 	
 	public RayOddToEven() {
-		setRay(new int[] {});
+		setRay(new int[5]);
 	}
 	
 	public RayOddToEven(int[] x) {

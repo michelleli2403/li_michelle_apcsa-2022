@@ -18,7 +18,7 @@ public class OddToEvenRunner
 		System.out.println( RayOddToEven.go( new int[]{2,4,6,8,8} ) );*/
 		
 		RayOddToEven test = new RayOddToEven();
-		System.out.println(test.go(new int[] {1,2,3,4}));
+		System.out.println(test.go(new int[] {1,2,3,4}));		
 	
 	}
 }

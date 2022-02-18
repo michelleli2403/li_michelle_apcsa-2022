@@ -1,9 +1,11 @@
+import java.lang.invoke.MethodHandles.Lookup.ClassOption;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Test
 {
 	public static void main(String[] args) {
-		ArrayList<Integer> ray;
+		/*ArrayList<Integer> ray;
 		ray=new ArrayList<Integer>();
 		ray.add(23);
 		ray.add(11);
@@ -15,6 +17,12 @@ public class Test
 		ray.add(0,3);
 		ray.set(0, 99);
 		ray.add(0,33);
-		System.out.println(ray);
-	}
+		System.out.println(ray);*/
+		
+		List<Integer> list = new ArrayList<>();
+		list.add(3);
+		System.out.println(list.get(1));
+		
+		}
+		
 }
