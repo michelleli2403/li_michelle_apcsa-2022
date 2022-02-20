@@ -1,6 +1,4 @@
-import java.lang.invoke.MethodHandles.Lookup.ClassOption;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class Test
 {
@@ -19,9 +17,9 @@ public class Test
 		ray.add(0,33);
 		System.out.println(ray);*/
 		
-		List<Integer> list = new ArrayList<>();
+		/*List<Integer> list = new ArrayList<>();
 		list.add(3);
-		System.out.println(list.get(1));
+		System.out.println(list.get(1));*/
 		
 		}
 		
