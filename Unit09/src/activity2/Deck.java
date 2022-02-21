@@ -1,9 +1,8 @@
 package activity2;
+import java.util.ArrayList;
 import java.util.List;
 
 import activity1.Card;
-
-import java.util.ArrayList;
 
 /**
  * The Deck class represents a shuffled deck of cards.
@@ -15,8 +14,8 @@ public class Deck {
 	/**
 	 * cards contains all the cards in the deck.
 	 */
-	// private List<Card> cards;
-	private Card[] cards;
+	private List<Card> cards;
+	//Array: private Card[] cards;
 
 	/**
 	 * size is the number of not-yet-dealt cards.
@@ -37,16 +36,24 @@ public class Deck {
 	public Deck(String[] ranks, String[] suits, int[] values) {
 		 
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		/*Array:
 		cards=new Card[ranks.length*suits.length];
-		System.out.println(ranks.length+" "+suits.length+" "+values.length);
 		for (int i=0; i<ranks.length; i++) {
 			for (int j=0; j<suits.length; j++) {
 				int cardIndex=(suits.length)*i+j;
-				System.out.println(i+" "+j+" "+cardIndex);
 				cards[cardIndex]=new Card(ranks[i],suits[j],values[i]);
 			}
 		}
 		size = cards.length;
+		shuffle();*/
+		
+		cards = new ArrayList<Card>();
+		for (int i=0; i<ranks.length; i++) {
+			for (String suitString : suits) {
+				cards.add(new Card(ranks[i], suitString, values[i]));
+			}
+		}
+		size = cards.size();
 		shuffle();
 	}
 
@@ -57,8 +64,7 @@ public class Deck {
 	 */
 	public boolean isEmpty() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-		
-		return size==0;  //testing something other than this, the conditional is not correct
+		return size==0;  
 	}
 
 	/**
@@ -77,6 +83,20 @@ public class Deck {
 	 */
 	public void shuffle() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+		/*Array: for (int i=cards.length-1; i>=0; i--) {
+			int pos=(int) (Math.random()*(i+1));
+			Card temp=cards[pos];
+			cards[pos]=cards[i];
+			cards[i]=temp;
+		}
+		size=cards.length;*/
+		
+		for (int i=cards.size()-1; i>=0; i--) {
+			int pos=(int) (Math.random()*(i+1));
+			Card temp = cards.get(pos);
+			cards.set(pos,cards.get(i));
+			cards.set(i,temp);
+		}
 	}
 
 	/**
@@ -84,11 +104,16 @@ public class Deck {
 	 * @return the card just dealt, or null if all the cards have been
 	 *         previously dealt.
 	 */
-	//m - UNCOMMENT LINES BELOW:
-	//public Card deal() {
+	public Card deal() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-		
-	//}
+		if (isEmpty()) {
+			return null;
+		}
+		size--;
+		//Array: Card c = cards[size];
+		Card c = cards.get(size);
+		return c;
+	}
 
 	/**
 	 * Generates and returns a string representation of this deck.
@@ -99,8 +124,8 @@ public class Deck {
 		String rtn = "size = " + size + "\nUndealt cards: \n";
 
 		for (int k = size - 1; k >= 0; k--) {
-			// m - uncomment line below
-			//rtn = rtn + cards.get(k);
+			//Array: rtn = rtn + cards[k];
+			rtn = rtn + cards.get(k);
 			if (k != 0) {
 				rtn = rtn + ", ";
 			}
@@ -110,8 +135,20 @@ public class Deck {
 			}
 		}
 
-
-/* m - uncomment!
+		/*Array
+		rtn = rtn + "\nDealt cards: \n";
+		
+		for (int k=cards.length-1; k>=size; k--) {
+			rtn = rtn + cards[k];
+			if (k!=size) {
+				rtn = rtn + ", ";
+			}
+			if ((k-cards.length) % 2 == 0) {
+				// Insert carriage returns so entire deck is visible on console.
+				rtn = rtn + "\n";
+			}
+		}*/
+		
 		rtn = rtn + "\nDealt cards: \n";
 		for (int k = cards.size() - 1; k >= size; k--) {
 			rtn = rtn + cards.get(k);
@@ -123,7 +160,7 @@ public class Deck {
 				rtn = rtn + "\n";
 			}
 		}
-*/
+		
 		rtn = rtn + "\n";
 		return rtn;
 	}
