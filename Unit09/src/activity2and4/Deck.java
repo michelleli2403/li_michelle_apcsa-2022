@@ -1,4 +1,4 @@
-package activity2;
+package activity2and4;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -83,7 +83,8 @@ public class Deck {
 	 */
 	public void shuffle() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
-		/*Array: for (int i=cards.length-1; i>=0; i--) {
+		/*Array: 
+		for (int i=cards.length-1; i>=0; i--) {
 			int pos=(int) (Math.random()*(i+1));
 			Card temp=cards[pos];
 			cards[pos]=cards[i];

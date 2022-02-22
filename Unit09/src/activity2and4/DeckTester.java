@@ -1,8 +1,4 @@
-package activity2;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+package activity2and4;
 
 /**
  * This is a class that tests the Deck class.
