@@ -1,13 +1,19 @@
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Test
 {
+	public static void changeOne(int[] ray)
+	{
+	   ray[0] = 0;
+	   ray[1] = 1;
+	}
+
+	//test code
 	public static void main(String[] args) {
-		List<String> bah = new ArrayList<>(Arrays.asList("hh","fdfs","f"));
-		System.out.println(bah.get(0).length());
-		System.out.println(bah);
+		int[] nums = {5,4,3,2,1};
+		System.out.println(Arrays.toString(nums));
+		changeOne(nums); //pass address of nums (ref)
+		System.out.println(Arrays.toString(nums));
 	}
 		
 }

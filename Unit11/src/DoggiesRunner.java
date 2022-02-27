@@ -13,6 +13,7 @@ public class DoggiesRunner
 		
 		System.out.print("How many Dogs are in the pack? :: ");
 		int size = keyboard.nextInt();
+		System.out.println();
 		Doggies pack = new Doggies(size);
 
 		for(int i=0; i<size;i++)
@@ -21,6 +22,7 @@ public class DoggiesRunner
 			int age = keyboard.nextInt();
 			System.out.print("Enter the name :: ");
 			String name  = keyboard.next();
+			System.out.println();
 			pack.set(i, age, name);
 		}		
 		System.out.println("pack :: "+pack);
