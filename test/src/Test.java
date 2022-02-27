@@ -1,11 +1,13 @@
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Test
 {
 	public static void main(String[] args) {
-		int x=0;
-		System.out.print( x++ );
-		System.out.println(++x);
+		List<String> bah = new ArrayList<>(Arrays.asList("hh","fdfs","f"));
+		System.out.println(bah.get(0).length());
+		System.out.println(bah);
 	}
 		
 }
