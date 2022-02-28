@@ -38,10 +38,11 @@ public class Toy
 	
 	public void setName( String nm )
 	{
+		name=nm;
 	}
 
 	public String toString()
 	{
-	   return "";
+	   return ""+name+" "+count;
 	}
 }
