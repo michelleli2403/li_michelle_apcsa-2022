@@ -11,8 +11,10 @@ public class ToyRunner
 		Toy t =  new Toy("sorry");
 		System.out.println(t);
 		
-		t=new Toy("ji goe");
+		t=new Toy("gi joe");
 		t.setCount(5);
 		System.out.println(t);
+		
+		
 	}
 }

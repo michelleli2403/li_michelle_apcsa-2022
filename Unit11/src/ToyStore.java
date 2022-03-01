@@ -2,11 +2,8 @@
 //www.apluscompsci.com
 //Name -
 
-import java.util.Scanner;
-import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
-import static java.lang.System.*;
 
 public class ToyStore
 {
@@ -49,17 +46,27 @@ public class ToyStore
   				name=t.getName();
   			}
   		}
-  		return null;
+  		return name;
   	}  
-  	
-  	//get least frequent method?
-  
+  	  
   	public void sortToysByCount()
   	{
-  	}  
+  		/*List<Toy> sortToy = new ArrayList<>();
+  		for (Toy t : toyList) {
+  			int min = Integer.MAX_VALUE;
+  			if (t.getCount() <= min) {
+  				min=t.getCount();
+  				sortToy.add(t);
+  			}
+  		}
+  		for (int i=0; i<toyList.size(); i++) {
+  			
+  		}*/
+  	}
+  
   	  
 	public String toString()
 	{
-	   return "";
+	   return ""+toyList;
 	}
 }
