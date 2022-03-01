@@ -2,16 +2,27 @@
 //www.apluscompsci.com
 //Name -
 
-import static java.lang.System.*; 
-
 class Rational implements Comparable<Rational>
 {
 	//add two instance variables
+	private int a;
+	private int b;
 
 	//write two constructors
-
+	public Rational() {
+		a=0;
+		b=0;
+	}
+	
+	public Rational(int one, int two) {
+		a=one;
+		b=two;
+	}
 
 	//write a setRational method
+	public void setRational(int one, int two) {
+		String fraction = "";
+	}
 	
 
 	//write  a set method for numerator and denominator
