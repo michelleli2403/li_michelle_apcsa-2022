@@ -1,4 +1,4 @@
-package activity1;
+package elevensActivities;
 /**
  * This is a class that tests the Card class.
  */

@@ -1,4 +1,4 @@
-package activity1;
+package elevensActivities;
 /**
  * Card.java
  *

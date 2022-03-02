@@ -1,8 +1,6 @@
-package activity2and4;
+package elevensActivities;
 import java.util.ArrayList;
 import java.util.List;
-
-import activity1.Card;
 
 /**
  * The Deck class represents a shuffled deck of cards.
