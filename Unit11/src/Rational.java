@@ -85,10 +85,10 @@ class Rational implements Comparable<Rational>
 	}
 	
 	
-	public boolean equals( Rational obj)
+	public boolean equals( Object obj)
 	{
-		obj.reduce();
-		if (a*getDen()-obj.getNum()*b==0) {
+		((Rational) obj).reduce();
+		if (a*getDen()-((Rational)obj).getNum()*b==0) {
 			return true;
 		}
 

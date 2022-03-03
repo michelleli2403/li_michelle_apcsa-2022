@@ -1,12 +1,20 @@
+import java.util.ArrayList;
 
 public class Test3 {
 	public static void main(String[] args) {
-		//test code in the main in another class
-			TestRunner test = new TestRunner();  					//1
-			Test one = new Test("comp");				//2
-			Test two = new Test("sci");				//3
-			System.out.println(one + " " + two);	//4
-			test.mystery(one,two);	
-			System.out.println(one + " " + two);//5  System.out.println(one + " " + two);	//6
+		ArrayList<Integer> ray = new ArrayList<>();
+		ray.add(23);
+		ray.add(11);
+		ray.set(1, 5);
+		ray.add(4);
+		ray.set(0, 7);
+		ray.add(53);
+		System.out.println(ray.set(1, 93));
+		System.out.println(ray.set(1, 93));
+		System.out.println(ray.set(1, 90));
+		System.out.println(ray.set(1, 93));
+
+
+			
 	}
 }

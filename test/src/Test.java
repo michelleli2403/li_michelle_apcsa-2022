@@ -1,15 +1,16 @@
 import java.util.Arrays;
 
 public class Test{
-	   private String s;
-	   public Test( String val ){  
-	     s = val;  
+	   private double grade;
+	   
+	   public Test(double g){
+	      grade=g;
 	   }
-	   public void change( ){
-	     s = "aplus";
+
+	   public String toString(){
+	      return ""+grade;
 	   }
-	   public String toString(){ 
-	      return s;  
-	   }
-}
+	}
+
+
 
