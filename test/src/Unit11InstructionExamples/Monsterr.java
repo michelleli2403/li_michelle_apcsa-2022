@@ -5,16 +5,16 @@ package Unit11InstructionExamples;
 
 import static java.lang.System.*;
 
-/*public class Monster
+public class Monsterr
 {
 	private String name;
 	private int howBig;	
 
-	public Monster()
+	public Monsterr()
 	{
 	}
 
-	public Monster(String n, int size)
+	public Monsterr(String n, int size)
 	{
 	}
 
@@ -28,18 +28,18 @@ import static java.lang.System.*;
 		return 0;
 	}
 	
-	public boolean isBigger(Monster other)
+	public boolean isBigger(Monsterr other)
 	{
 		return false;
 	}
 	
-	public boolean isSmaller(Monster other)
+	public boolean isSmaller(Monsterr other)
 	{
 		//call isBigger() use !
 		return false;
 	}
 
-	public boolean namesTheSame(Monster other)
+	public boolean namesTheSame(Monsterr other)
 	{
 		return false;
 	}
@@ -48,4 +48,4 @@ import static java.lang.System.*;
 	{
 		return "";
 	}
-}*/
+}

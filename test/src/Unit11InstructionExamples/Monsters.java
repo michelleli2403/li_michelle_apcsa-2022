@@ -10,7 +10,7 @@ import static java.lang.Math.*;
 import static java.util.Arrays.*;
 import static java.util.Collections.*;
 
-public class Monsters
+/*public class Monsters
 {
 	private Monster[] myMonsters;
 
@@ -37,4 +37,4 @@ public class Monsters
 	{
 		return "";
 	}
-}
+}*/

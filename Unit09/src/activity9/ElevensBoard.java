@@ -54,9 +54,15 @@ public class ElevensBoard extends Board {
 	 *         false otherwise.
 	 */
 	@Override
-	public boolean isLegal(List<Integer> selectedCards) {
-		return false;
+	public boolean isLegal(List<Integer> selectedCards) { //selectedCards is a reference to the list of cards
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
+		if (selectedCards.size()==2) {
+			return containsPairSum11(selectedCards);
+		} else if (selectedCards.size()==3) {
+			return containsJQK(selectedCards);
+		} else {
+			return false;
+		}
 	}
 
 	/**
@@ -69,8 +75,9 @@ public class ElevensBoard extends Board {
 	 */
 	@Override
 	public boolean anotherPlayIsPossible() {
-		return false;
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
+		List<Integer> cIndexes = cardIndexes();
+		return containsPairSum11(cIndexes) || containsJQK(cIndexes);
 	}
 
 	/**

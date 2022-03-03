@@ -10,10 +10,10 @@ import static java.lang.Math.*;
 import static java.util.Arrays.*;
 import static java.util.Collections.*;
 
-public class Monster
+/*public class Monster
 {
 	//build your own Monster class 
 	//with methods like isBigger and isSmaller
 	//or use your Monster class from
 	//lab18 lab set 1
-}
+}*/
