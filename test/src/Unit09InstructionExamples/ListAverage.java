@@ -16,7 +16,7 @@ public class ListAverage
 		for (int  i=0; i<ray.size(); i++) {
 			if(ray.get(i)>big) 
 				big=ray.get(i);
-			if (ray.get(i)>small)
+			if (ray.get(i)<small)
 				small=ray.get(i);
 		}
 		return ((double)big+small)/2;
