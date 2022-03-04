@@ -25,7 +25,9 @@ import java.util.ArrayList;
  * This class provides a GUI for solitaire games related to Elevens.
  */
 public class CardGameGUI extends JFrame implements ActionListener {
-
+//parent class: JFrame
+//child class: CardGameGUI
+//interface: ActionListener
 	/** Height of the game frame. */
 	private static final int DEFAULT_HEIGHT = 302;
 	/** Width of the game frame. */
@@ -111,10 +113,11 @@ public class CardGameGUI extends JFrame implements ActionListener {
 			}
 		}
 
-		selections = new boolean[board.size()];
+		selections = new boolean[board.size()]; /*creates an array of booleans and calls it selections. 
+		This will be used to indicate which of the cards has been clicked. Each card will be attached to a boolean (clicked or not clicked)*/
 		initDisplay();
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		repaint();
+		repaint();//updates graphics on the screen. 
 	}
 
 	/**
@@ -284,12 +287,12 @@ public class CardGameGUI extends JFrame implements ActionListener {
 	 * @param e the button click action event
 	 */
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource().equals(replaceButton)) {
+		if (e.getSource().equals(replaceButton)) { //if you click the replace button then it has to start checking what you've clicked
 			// Gather all the selected cards.
-			List<Integer> selection = new ArrayList<Integer>();
+			List<Integer> selection = new ArrayList<Integer>(); /*instantiate an array list of integers*/
 			for (int k = 0; k < board.size(); k++) {
 				if (selections[k]) {
-					selection.add(new Integer(k));
+					selection.add(new Integer(k)); //Integer declaration has been deprecated 
 				}
 			}
 			// Make sure that the selected cards represent a legal replacement.
@@ -356,7 +359,11 @@ public class CardGameGUI extends JFrame implements ActionListener {
 		 * Each card is represented as a label.
 		 * @param e the mouse event.
 		 */
-		public void mouseClicked(MouseEvent e) {
+		/*detects a hardware thing. Change the graphic
+		of the card and then know that you selected that card. The way you know you selected it
+		is when you change the boolean state of the card. When you click it, this method goes through.
+		The card gets toggled/inverted*/
+		public void mouseClicked(MouseEvent e) { 
 			for (int k = 0; k < board.size(); k++) {
 				if (e.getSource().equals(displayCards[k])
 						&& board.cardAt(k) != null) {
