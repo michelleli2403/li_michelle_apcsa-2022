@@ -29,9 +29,15 @@ public class ToyStore
   
   	public Toy getThatToy( String nm )
   	{
-  		for (Toy t : toyList) {
+  		/*for (Toy t : toyList) {
   			if (t.getName().equals(nm))
   				return t;
+  		}
+  		return null;*/
+  		for (int i=0; i<toyList.size(); i++) {
+  			if (toyList.get(i).getName().equals(nm)) {
+  				return toyList.get(i);
+  			}
   		}
   		return null;
   	}

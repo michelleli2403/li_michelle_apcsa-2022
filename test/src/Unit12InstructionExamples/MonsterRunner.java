@@ -2,7 +2,7 @@ package Unit12InstructionExamples;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 //Name -
-/*
+
 import static java.lang.System.*;
 
 public class MonsterRunner
@@ -42,4 +42,4 @@ public class MonsterRunner
 		out.print("\nmTwo.compareTo(mOne) == ");
 		out.println(mTwo.compareTo(mOne));
 	}
-}*/
+}

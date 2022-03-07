@@ -19,7 +19,7 @@ public class MonsterRunner
 		int size = keyboard.nextInt();
 		
 		//instantiate monster one
-		Monster one = new Monster(name, size);
+		//Monster one = new Monster(name, size);
 		
 		//ask for name and size
 		

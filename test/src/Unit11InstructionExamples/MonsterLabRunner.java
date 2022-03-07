@@ -16,7 +16,7 @@ public class MonsterLabRunner
 		
 		out.print("How many monsters are in the herd? :: ");
 		int size = keyboard.nextInt();
-		Monsters herd = new Monsters(size);
+		//Monsters herd = new Monsters(size);
 
 		for(int i=0; i<size;i++)
 		{
@@ -32,7 +32,7 @@ public class MonsterLabRunner
 			
 		}		
 		
-		System.out.println("HERD :: "+herd+"\n");
+		//System.out.println("HERD :: "+herd+"\n");
 		//print out the other stats
 			
 	}		
