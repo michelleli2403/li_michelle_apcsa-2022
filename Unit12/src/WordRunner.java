@@ -12,7 +12,7 @@ public class WordRunner
 {
 	public static void main( String args[] ) throws IOException
 	{
-		Scanner file = new Scanner(new File("C:\\Users\\tony.mauro\\Desktop\\APCS-A....words.dat")); //find where I put it. put double backslash btwn each part
+		Scanner file = new Scanner(new File("C:\\Users\\miche\\Desktop\\apcsa\\li_michelle_apcsa-2022\\Unit12\\src\\words.dat")); //find where I put it. put double backslash btwn each part
 
 		int size = file.nextInt();
 		file.nextLine();

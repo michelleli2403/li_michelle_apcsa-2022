@@ -12,3 +12,4 @@ public interface Monster
 	public boolean isSmaller(Monster other);
 	public boolean namesTheSame(Monster other);
 }
+
