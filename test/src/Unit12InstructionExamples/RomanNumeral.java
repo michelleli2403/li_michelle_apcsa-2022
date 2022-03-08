@@ -3,8 +3,6 @@ package Unit12InstructionExamples;
 //www.apluscompsci.com
 //Name -
 
-import static java.lang.System.*; 
-
 public class RomanNumeral implements Comparable<RomanNumeral>
 {
 	private Integer number;
@@ -34,6 +32,26 @@ public class RomanNumeral implements Comparable<RomanNumeral>
 	//write a set roman method
 	public void setRoman(String rom) {
 		roman=rom;
+	}
+
+	//write get methods for number and roman
+	public int getNumber() {
+		int newNum = 0;
+
+		for (int j=0; j<LETTERS.length; j++) {
+			if (roman.indexOf(LETTERS[j])==0) {
+				System.out.println("fdfdf"+NUMBERS[j]);
+				newNum+=NUMBERS[j];
+				roman=roman.substring(LETTERS[j].length());
+				j=-1;
+			}
+			
+		}
+		
+		return newNum;
+	}
+	public String getRoman() {
+		/*int num=getNumber();
 		int sum1=0;
 
 		for (int j=0; j<LETTERS.length; j++) {
@@ -41,24 +59,7 @@ public class RomanNumeral implements Comparable<RomanNumeral>
 				sum1+=NUMBERS[j];
 				roman=roman.substring(LETTERS[j].length());
 			}
-		}
-	}
-
-	//write get methods for number and roman
-	public int getNumber() {
-		/*int sum1=0;
-		String newRoman=roman;
-
-		for (int j=0; j<LETTERS.length; j++) {
-			if (newRoman.indexOf(LETTERS[j])!=-1) {
-				sum1+=NUMBERS[j];
-				newRoman=newRoman.substring(LETTERS[j].length());
-			}
-		}
-		System.out.println("fdfsdfdsf"+number);*/
-		return number;
-	}
-	public String getRoman() {
+		}*/
 		return roman;
 		
 	}
@@ -79,7 +80,7 @@ public class RomanNumeral implements Comparable<RomanNumeral>
 		}
 		
 		for (int i=0; i<LETTERS.length; i++) {
-			if (newRoman2.indexOf(LETTERS[i])!=-1) {
+			if (newRoman2.indexOf(LETTERS[i])==0) {
 				sum2+=NUMBERS[i];
 				newRoman2=newRoman2.substring(LETTERS[i].length());
 			}
@@ -93,7 +94,6 @@ public class RomanNumeral implements Comparable<RomanNumeral>
 	public String toString() {
 		String roman1="";
 		int remain=number;
-		//for (int i=0; i<NUMBERS.length; i++) {
 			for (int j=0; j<NUMBERS.length; j++) {
 				if (NUMBERS[j]<=remain) {
 					roman1+=LETTERS[j];
@@ -101,7 +101,6 @@ public class RomanNumeral implements Comparable<RomanNumeral>
 					j=-1;
 				}
 			}
-		//}
 		return roman1;
 	}
 	
