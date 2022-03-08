@@ -38,6 +38,15 @@ public class RomanNumeral implements Comparable<RomanNumeral>
 
 	//write get methods for number and roman
 	public int getNumber() {
+		int sum1=0;
+		String newRoman=roman;
+
+		for (int j=0; j<LETTERS.length; j++) {
+			if (newRoman.indexOf(LETTERS[j])!=-1) {
+				sum1+=NUMBERS[j];
+				newRoman=newRoman.substring(LETTERS[j].length());
+			}
+		}
 		return number;
 	}
 	public String getRoman() {
@@ -74,16 +83,16 @@ public class RomanNumeral implements Comparable<RomanNumeral>
 	//write  toString() method
 	public String toString() {
 		String roman1="";
-		int remain=getNumber();
-		for (int i=0; i<NUMBERS.length; i++) {
-			int j=0;
-			if (NUMBERS[j]<=remain) {
-				roman1+=LETTERS[i];
-				remain=remain-NUMBERS[i];
-				System.out.println("afdsf"+remain);
-				j++;
+		Integer remain=number;
+		//for (int i=0; i<NUMBERS.length; i++) {
+			for (int j=0; j<NUMBERS.length; j++) {
+				if (NUMBERS[j]<=remain) {
+					roman1+=LETTERS[j];
+					remain=remain-NUMBERS[j];
+					j=-1;
+				}
 			}
-		}
+		//}
 		return roman1;
 	}
 	
