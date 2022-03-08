@@ -2,7 +2,7 @@ package Unit12InstructionExamples;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 //Name -
-/*
+
 import static java.lang.System.*;
 
 public class RomanNumeralRunner
@@ -60,4 +60,4 @@ public class RomanNumeralRunner
 		out.print("\nrTwo.compareTo(rOne) == ");
 		out.println(rTwo.compareTo(rOne));			
 	}
-}*/
+}

@@ -66,7 +66,9 @@ public class Monster implements Comparable
 
 	public boolean equals( Object obj )
 	{
-		if (getWeight()==obj.getWeight()&&)
+		if (getWeight()==((Monster) obj).getWeight() && getHeight()==((Monster) obj).getHeight() && getAge()==((Monster) obj).getAge()) {
+			return true;
+		}
 
 		return false;
 	}
@@ -74,15 +76,24 @@ public class Monster implements Comparable
 	public int compareTo( Object obj )
 	{
 		Monster rhs = (Monster)obj;
-
-
-
-
+		if(getWeight()>rhs.getWeight())
+			return 1;
+		if (getHeight() > rhs.getHeight()) {
+			return 1;
+		}
+		if (getAge() > rhs.getAge()) {
+			return 1;
+		}
+		if (getWeight()==rhs.getWeight() && getHeight()==rhs.getHeight() && getAge()==rhs.getAge())
+			return 0;
 
 		return -1;
 	}
 
 	//write a toString() method
+	public String toString() {
+		return ""+getHeight() + " " + getWeight() + " " + getAge();
+	}
 	
 	
 }
