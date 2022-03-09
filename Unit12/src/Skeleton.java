@@ -50,3 +50,10 @@ public class Skeleton implements Monster
 		return getName() + " " + getHowBig();
 	}
 }
+
+
+
+
+
+
+
