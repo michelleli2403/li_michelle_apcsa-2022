@@ -27,6 +27,15 @@ public class RomanNumeral implements Comparable<RomanNumeral>
 	//write a set number method
 	public void setNumber(int num) {
 		number=num;
+		roman="";
+		int remain=number;
+			for (int j=0; j<NUMBERS.length; j++) {
+				if (NUMBERS[j]<=remain) {
+					roman+=LETTERS[j];
+					remain=remain-NUMBERS[j];
+					j=-1;
+				}
+			}
 	}
 	
 	//write a set roman method
@@ -50,15 +59,7 @@ public class RomanNumeral implements Comparable<RomanNumeral>
 		return newNum;
 	}
 	public String getRoman() {
-		roman="";
-		int remain=number;
-			for (int j=0; j<NUMBERS.length; j++) {
-				if (NUMBERS[j]<=remain) {
-					roman+=LETTERS[j];
-					remain=remain-NUMBERS[j];
-					j=-1;
-				}
-			}
+		
 		return roman;
 		
 	}
@@ -88,13 +89,10 @@ public class RomanNumeral implements Comparable<RomanNumeral>
 		return sum1-sum2;
 		
 	}
+	
 
 	//write  toString() method
 	public String toString() {
-		if (roman==null) {
-			roman=getRoman();
-			System.out.println("fdf"+getRoman());
-		}
 		return roman;
 	}
 	
