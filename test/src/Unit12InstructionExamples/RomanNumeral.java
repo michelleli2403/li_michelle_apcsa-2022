@@ -5,7 +5,7 @@ package Unit12InstructionExamples;
 
 public class RomanNumeral implements Comparable<RomanNumeral>
 {
-	private Integer number;
+	private int number;
 	private String roman;
 
 	private final static int[] NUMBERS= {1000,900,500,400,100,90,
@@ -40,7 +40,6 @@ public class RomanNumeral implements Comparable<RomanNumeral>
 
 		for (int j=0; j<LETTERS.length; j++) {
 			if (roman.indexOf(LETTERS[j])==0) {
-				System.out.println("fdfdf"+NUMBERS[j]);
 				newNum+=NUMBERS[j];
 				roman=roman.substring(LETTERS[j].length());
 				j=-1;
@@ -51,15 +50,15 @@ public class RomanNumeral implements Comparable<RomanNumeral>
 		return newNum;
 	}
 	public String getRoman() {
-		/*int num=getNumber();
-		int sum1=0;
-
-		for (int j=0; j<LETTERS.length; j++) {
-			if (roman.indexOf(LETTERS[j])!=-1) {
-				sum1+=NUMBERS[j];
-				roman=roman.substring(LETTERS[j].length());
+		roman="";
+		int remain=number;
+			for (int j=0; j<NUMBERS.length; j++) {
+				if (NUMBERS[j]<=remain) {
+					roman+=LETTERS[j];
+					remain=remain-NUMBERS[j];
+					j=-1;
+				}
 			}
-		}*/
 		return roman;
 		
 	}
@@ -70,7 +69,7 @@ public class RomanNumeral implements Comparable<RomanNumeral>
 		int sum1=0;
 		int sum2=0;
 		String newRoman=roman;
-		String newRoman2=r.getRoman();
+		String newRoman2=r.roman;
 
 		for (int j=0; j<LETTERS.length; j++) {
 			if (newRoman.indexOf(LETTERS[j])!=-1) {
@@ -80,7 +79,7 @@ public class RomanNumeral implements Comparable<RomanNumeral>
 		}
 		
 		for (int i=0; i<LETTERS.length; i++) {
-			if (newRoman2.indexOf(LETTERS[i])==0) {
+			if (newRoman2.indexOf(LETTERS[i])!=-1) {
 				sum2+=NUMBERS[i];
 				newRoman2=newRoman2.substring(LETTERS[i].length());
 			}
@@ -92,16 +91,11 @@ public class RomanNumeral implements Comparable<RomanNumeral>
 
 	//write  toString() method
 	public String toString() {
-		String roman1="";
-		int remain=number;
-			for (int j=0; j<NUMBERS.length; j++) {
-				if (NUMBERS[j]<=remain) {
-					roman1+=LETTERS[j];
-					remain=remain-NUMBERS[j];
-					j=-1;
-				}
-			}
-		return roman1;
+		if (roman==null) {
+			roman=getRoman();
+			System.out.println("fdf"+getRoman());
+		}
+		return roman;
 	}
 	
 	
