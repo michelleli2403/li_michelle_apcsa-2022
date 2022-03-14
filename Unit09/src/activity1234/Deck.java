@@ -71,7 +71,6 @@ public class Deck {
 	 */
 	public int size() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-		
 		return size;
 	}
 
@@ -96,6 +95,7 @@ public class Deck {
 			cards.set(pos,cards.get(i));
 			cards.set(i,temp);
 		}
+		size=cards.size();
 	}
 
 	/**
