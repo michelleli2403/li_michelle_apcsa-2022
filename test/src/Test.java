@@ -1,4 +1,5 @@
 public class Test {
+<<<<<<< Updated upstream
 	
 	public static String scrambleWord(String word) {
 		int current=0;
@@ -24,5 +25,20 @@ public class Test {
 		//System.out.println("fdfd");
 		System.out.println(Test.scrambleWord("AARDVARK"));
 	}
+=======
+	public static void main(String[] args) {
+		int[][] mat = {{5,7},{5,3,4,6},{0,8,9}};
+
+		for( int[] row : mat )
+		{
+		   for( int num : row )
+		   {
+		      System.out.print( num + " ");
+		   }
+		   System.out.println();
+		}
+
+}
+>>>>>>> Stashed changes
 }
 	
