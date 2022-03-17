@@ -1,44 +1,26 @@
 public class Test {
-<<<<<<< Updated upstream
+	public TokenPass(int playerCount) {
+		board = new int[playerCount];
+		for (int i=0; i<board.length; i++) {
+			board[i]=((int)Math.random()*10+1);
+		}
+		currentPlayer = ((int) Math.random() * playerCount);
+	}
 	
-	public static String scrambleWord(String word) {
-		int current=0;
-		String result="";
-		while (current<word.length()-1) {
-			if (word.charAt(current)=='A' && !word.substring(current+1,current+2).equals("A")) {
-				result+=word.substring(current+1,current+2);
-				result+="A";
-				current+=2;
+	public void distributeCurrentPlayerTokens() {
+		int i=currentPlayer;
+		while (board[currentPlayer]!=0) {
+			if (i==board.length-1) {
+				i=0;
+				board[i]+=1;
 			}
 			else {
-				result+=word.substring(current,current+1);
-				current++;
+				board[i+1]+=1;
 			}
+			board[currentPlayer]--;
+			i++;
 		}
-		if(current<word.length()) {
-			result+=word.substring(current);
-		}
-		return result;
+		
 	}
 	
-	public static void main(String[] args) {
-		//System.out.println("fdfd");
-		System.out.println(Test.scrambleWord("AARDVARK"));
-	}
-=======
-	public static void main(String[] args) {
-		int[][] mat = {{5,7},{5,3,4,6},{0,8,9}};
-
-		for( int[] row : mat )
-		{
-		   for( int num : row )
-		   {
-		      System.out.print( num + " ");
-		   }
-		   System.out.println();
-		}
-
 }
->>>>>>> Stashed changes
-}
-	
