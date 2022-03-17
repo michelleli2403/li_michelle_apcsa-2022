@@ -16,12 +16,29 @@ public class Block implements Locatable
 
 	public Block()
 	{
-
+		xPos=100;
+		yPos=150;
+		width=10;
+		height=10;
+		color=Color.black;
 
 	}
 
 	//add other Block constructors - x , y , width, height, color
+	public Block(int x,int y) {
+		xPos=x;
+		yPos=y;
+		width=10;
+		height=10;
+		color=Color.black;
+	}
 	
+	public Block(int x, int y) {
+		xPos=x;
+		yPos=y;
+		width=10;
+		height=10;
+	}
 	
 	
 	
