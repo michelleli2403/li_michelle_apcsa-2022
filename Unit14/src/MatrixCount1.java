@@ -18,8 +18,16 @@ public class MatrixCount1
 		//add code
     	int count=0;
     	for (int[] row : m) {
-    		
+    		for (int num : row) {
+    			if (num==val) {
+    				count++;
+    			}
+    		}
     	}
-		return 0;
+		return count;
+    }
+    
+    public static int[][] getM() {
+    	return m;
     }
 }
