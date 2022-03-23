@@ -32,7 +32,7 @@ public class Grid
 						count++;
 				}
 			}
-			//System.out.println(s+" count is " + count);
+			System.out.println(s+" count is " + count);
 			if(max<count) {
 				max=count;
 				most=s;
@@ -44,6 +44,7 @@ public class Grid
 	}
 
 	//returns a count of how many times val occurs in the matrix
+	//I already did this in findMax method
 	private int countVals( String val )
 	{
 		return 0;

@@ -11,12 +11,13 @@ public class TotalRow
     {
     	//add code here
     	List<Integer> list = new ArrayList<Integer>();
-    	int sum=0;
+
     	for (int[] row : m) {
+    		int sum=0;
     		for (int num : row) {
     			sum+=num;
-    			list.add(sum);
     		}
+    		list.add(sum);
     	}
 		return list;
     }
