@@ -19,7 +19,17 @@ public class Ball extends Block
 
 	//add the other Ball constructors
 	
+	public Ball(int x, int y) {
+		super(x,y);
+		xSpeed=3;
+		ySpeed=1;
+	}
 	
+	public Ball(int x, int y, int wid, int ht) {
+		super(x,y,wid,ht);
+		xSpeed=3;
+		ySpeed=1;
+	}
 	
 	
 	
@@ -32,22 +42,34 @@ public class Ball extends Block
 	
 	   
    //add the set methods
+	
+	//m: another method here
+	
+	public void setYSpeed(int ySpd) {
+		ySpeed=ySpd;
+	}
    
 
    public void moveAndDraw(Graphics window)
    {
    	//draw a white ball at old ball location
-
+	  draw(window,Color.white);
 
       setX(getX()+xSpeed);
+      
 		//setY
-
+      setY(getY()+ySpeed);
+      
 		//draw the ball at its new location
+      draw(window);
    }
    
 	public boolean equals(Object obj)
 	{
-
+		Ball other = (Ball)obj;
+		if(super.equals(other)&&getXSpeed()==other.getXSpeed()&&getYSpeed()==other.getYSpeed())
+			return true;
+		return false;
 
 
 
