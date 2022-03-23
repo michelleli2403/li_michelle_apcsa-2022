@@ -2,15 +2,17 @@ package activity9;
 
 import java.util.List;
 
+import activity1234.Card;
+
 /**
  * The ElevensBoard class represents the board in a game of Elevens.
  */
-public class ElevensBoard extends Board {
+public class TensBoard extends Board {
 
 	/**
 	 * The size (number of cards) on the board.
 	 */
-	private static final int BOARD_SIZE = 9;
+	private static final int BOARD_SIZE = 13;
 
 	/**
 	 * The ranks of the cards for this game to be sent to the deck.
@@ -28,7 +30,7 @@ public class ElevensBoard extends Board {
 	 * The values of the cards for this game to be sent to the deck.
 	 */
 	private static final int[] POINT_VALUES =
-		{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0, 0, 0};
+		{1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0, 0, 0};
 
 	/**
 	 * Flag used to control debugging print statements.
@@ -39,7 +41,7 @@ public class ElevensBoard extends Board {
 	/**
 	 * Creates a new <code>ElevensBoard</code> instance.
 	 */
-	 public ElevensBoard() {
+	 public TensBoard() {
 	 	super(BOARD_SIZE, RANKS, SUITS, POINT_VALUES);
 	 }
 
@@ -56,9 +58,9 @@ public class ElevensBoard extends Board {
 	public boolean isLegal(List<Integer> selectedCards) { //selectedCards is a reference to the list of cards
 	/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
 		if (selectedCards.size()==2) {
-			return containsPairSum11(selectedCards);
-		} else if (selectedCards.size()==3) {
-			return containsJQK(selectedCards);
+			return containsPairSum10(selectedCards);
+		} else if (selectedCards.size()==4) {
+			return contains4(selectedCards);
 		} else {
 			return false;
 		}
@@ -77,7 +79,7 @@ public class ElevensBoard extends Board {
 	public boolean anotherPlayIsPossible() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
 		List<Integer> cIndexes = cardIndexes();
-		return containsPairSum11(cIndexes) || containsJQK(cIndexes);
+		return containsPairSum10(cIndexes) || contains4(cIndexes);
 	}
 
 	/**
@@ -88,13 +90,13 @@ public class ElevensBoard extends Board {
 	 * @return true if the board entries in selectedCards
 	 *              contain an 11-pair; false otherwise.
 	 */
-	private boolean containsPairSum11(List<Integer> selectedCards) {
+	private boolean containsPairSum10(List<Integer> selectedCards) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
 		for (int sk1 = 0; sk1 < selectedCards.size(); sk1++) {
 			int k1=selectedCards.get(sk1).intValue();
 			for (int sk2=sk1+1; sk2<selectedCards.size(); sk2++) {
 				int k2=selectedCards.get(sk2).intValue();
-				if (cardAt(k1).pointValue()+cardAt(k2).pointValue()==11) {
+				if (cardAt(k1).pointValue()+cardAt(k2).pointValue()==10) {
 					return true;
 				}
 			}
@@ -110,21 +112,38 @@ public class ElevensBoard extends Board {
 	 * @return true if the board entries in selectedCards
 	 *              include a jack, a queen, and a king; false otherwise.
 	 */
-	private boolean containsJQK(List<Integer> selectedCards) {
+	private boolean contains4(List<Integer> selectedCards) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
-		boolean foundJack=false;
-		boolean foundQueen=false;
-		boolean foundKing=false;
-		for (Integer kObj : selectedCards) {
-			int k=kObj.intValue();
-			if (cardAt(k).rank().equals("jack")) {
-				foundJack=true;
-			} else if (cardAt(k).rank().equals("queen")) {
-				foundQueen=true;
-			} else if (cardAt(k).rank().equals("king")) {
-				foundKing=true;
+		//boolean same = false;
+		
+		/*Card first = cardAt(selectedCards.get(0));
+		Card second = cardAt(selectedCards.get(1));
+		Card third = cardAt(selectedCards.get(2));
+		Card fourth = cardAt(selectedCards.get(3));
+		if (first.rank().equals(second.rank()) && second.rank().equals(third.rank()) && third.rank().equals(fourth.rank())) {
+			if (first.rank().equals("king") || first.rank().equals("queen") || first.rank().equals("jack") || first.rank().equals("10"))
+				same=true;
+		}*/
+		int kingCount=0;
+		int queenCount=0;
+		int jackCount=0;
+		int tenCount=0;
+		for (int i=0; i<selectedCards.size(); i++) {
+			String s = cardAt(selectedCards.get(i)).rank();
+			if (s.equals("king")) {
+				kingCount++;
+			}
+			else if (s.equals("queen")) {
+				queenCount++;
+			}
+			else if (s.equals("jack")) {
+				jackCount++;
+			}
+			else if (s.equals("10")) {
+				tenCount++;
 			}
 		}
-		return foundJack && foundQueen && foundKing;
+		
+		return kingCount==4 || queenCount==4 || jackCount==4 || tenCount==4;
 	}
 }
