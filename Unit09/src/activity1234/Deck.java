@@ -96,6 +96,7 @@ public class Deck {
 			cards.set(i,temp);
 		}
 		size=cards.size();
+		
 	}
 
 	/**
