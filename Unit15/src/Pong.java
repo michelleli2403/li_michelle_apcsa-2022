@@ -20,22 +20,26 @@ public class Pong extends Canvas implements KeyListener, Runnable
 	private Paddle rightPaddle;
 	private boolean[] keys;
 	private BufferedImage back;
+	private int leftScore;
+	private int rightScore;
 
 
 	public Pong()
 	{
 		//set up all variables related to the game
-
-
-
-
+		ball = new Ball(10,100,10,10,Color.blue,2,1);
+		leftPaddle = new Paddle(20,200,10,40,Color.orange,2);
+		rightPaddle = new Paddle(760,200,10,40,Color.orange,2);
 		keys = new boolean[4];
+		leftScore=0;
+		rightScore=0;
 
     
     	setBackground(Color.WHITE);
 		setVisible(true);
 		
-		new Thread(this).start();
+		new Thread(this).start();   /*this paints the pieces onto the screen in a periodic rotation. 
+										Every few ms, a method will be called and paint graphics onto canvas*/
 		addKeyListener(this);		//starts the key thread to log key strokes
 	}
 	
@@ -77,7 +81,7 @@ public class Pong extends Canvas implements KeyListener, Runnable
 
 
 		//see if the ball hits the left paddle
-		
+		if(ball.getX()<=leftPaddle.getX()) //m: not finished
 		
 		
 		//see if the ball hits the right paddle
@@ -87,13 +91,16 @@ public class Pong extends Canvas implements KeyListener, Runnable
 
 
 		//see if the paddles need to be moved
-
-
-
-
-
-
-
+		if (keys[0]==true) {
+			leftPaddle.moveUpAndDraw(graphToBack);
+		} 
+		if (keys[1]==true) {
+			leftPaddle.moveDownAndDraw(graphToBack);
+		}
+		if (keys[2]==true) {
+			rightPaddle.moveUpAndDraw(graphToBack);
+		}
+		//m: not done
 
 
 

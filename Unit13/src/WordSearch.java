@@ -38,7 +38,7 @@ public class WordSearch
     			}
     		}
     	}
-    	return false;
+    	return found;
     }
 
 	public boolean checkRight(String w, int r, int c, int len)
@@ -57,46 +57,111 @@ public class WordSearch
 	public boolean checkLeft(String w, int r, int c, int len)
 	{
 		int i=0;
-		/*while(i<w.length()) {
+		while(i<w.length()) {
 			if(c-i<0 || c-i>=len)
 				return false;
-			if(!w.substring)
-		}*/
-		return false;
+			if(!w.substring(i,i+1).equals(m[r][c-i])) 
+				return false;
+			i++;
+		}
+		return true;
 	}
 
 	public boolean checkUp(String w, int r, int c, int len)
 	{
-		return false;
+		int i=0;
+		while (i<w.length()) {
+			if (r-i<0 || r-i>=len) 
+				return false;
+			if(!w.substring(i,i+1).equals(m[r-i][c]))
+				return false;
+			i++;
+		}
+		return true;
 	}
 
 	public boolean checkDown(String w, int r, int c, int len)
    {
-	   return false;
+		int i=0;
+		while (i<w.length()) {
+			if (r+i<0 || r+i>=len) 
+				return false;
+			if(!w.substring(i,i+1).equals(m[r+i][c]))
+				return false;
+			i++;
+		}
+	   return true;
 	}
 
 	public boolean checkDiagUpRight(String w, int r, int c, int len)
 	{
-		return false;
+		int i=0;
+		while(i<w.length()) {
+			if(r-i<0 || r-i>=len) 
+				return false;
+			if(c+i<0 || c+i>=len) 
+				return false;
+			if(!w.substring(i,i+1).equals(m[r-i][c+i]))
+				return false;
+			i++;
+		}
+		return true;
 	}
 
 	public boolean checkDiagUpLeft(String w, int r, int c, int len)
 	{
-		return false;
+		int i=0;
+		while(i<w.length()) {
+			if(r-i<0 || r-i>=len) 
+				return false;
+			if(c-i<0 || c-i>=len) 
+				return false;
+			if(!w.substring(i,i+1).equals(m[r-i][c-i]))
+				return false;
+			i++;
+		}
+		return true;
 	}
 
 	public boolean checkDiagDownLeft(String w, int r, int c, int len)
    {
-		return false;
+		int i=0;
+		while(i<w.length()) {
+			if(r+i<0 || r+i>=len) 
+				return false;
+			if(c-i<0 || c-i>=len) 
+				return false;
+			if(!w.substring(i,i+1).equals(m[r+i][c-i]))
+				return false;
+			i++;
+		}
+		return true;
 	}
 
 	public boolean checkDiagDownRight(String w, int r, int c, int len)
 	{
-		return false;
+		int i=0;
+		while(i<w.length()) {
+			if(r+i<0 || r+i>=len) 
+				return false;
+			if(c+i<0 || c+i>=len) 
+				return false;
+			if(!w.substring(i,i+1).equals(m[r+i][c+i]))
+				return false;
+			i++;
+		}
+		return true;
 	}
 
     public String toString()
     {
- 		return "";
+    	String matrix="";
+    	for (int i=0; i<m.length; i++) {
+    		for (int j=0; j<m[0].length; j++) {
+    			matrix+=m[i][j] + " ";
+    		}
+    		matrix+="\n";
+    	}
+ 		return matrix;
     }
 }
