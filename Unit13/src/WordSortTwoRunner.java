@@ -12,8 +12,8 @@ public class WordSortTwoRunner
 {
 	public static void main( String args[] ) throws IOException
 	{
-		//Scanner file = new Scanner(new File("C:\\Users\\lim2403\\Desktop\\apcsa\\li_michelle_apcsa-2022\\li_michelle_apcsa-2022\\Unit13\\src\\wordsorttwo.dat"));
-		Scanner file = new Scanner(new File("C:\\Users\\miche\\Desktop\\apcsa\\li_michelle_apcsa-2022\\Unit13\\src\\wordsorttwo.dat"));
+		Scanner file = new Scanner(new File("C:\\Users\\lim2403\\Desktop\\apcsa\\li_michelle_apcsa-2022\\li_michelle_apcsa-2022\\Unit13\\src\\wordsorttwo.dat"));
+		//Scanner file = new Scanner(new File("C:\\Users\\miche\\Desktop\\apcsa\\li_michelle_apcsa-2022\\Unit13\\src\\wordsorttwo.dat"));
 		int size = file.nextInt();
 		file.nextLine();
 		for(int i = 0; i<size; i++)
