@@ -1,6 +1,4 @@
-package Unit15InstructionExamples;//(c) A+ Computer Science
-//www.apluscompsci.com
-//Name -
+
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -9,7 +7,7 @@ import java.awt.Canvas;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/*class BallTestTwo extends Canvas implements Runnable
+class BallTestTwo extends Canvas implements Runnable
 {
 	private Ball ball;
 
@@ -63,4 +61,4 @@ import java.awt.event.ActionListener;
       {
       }
   	}	
-}*/
+}

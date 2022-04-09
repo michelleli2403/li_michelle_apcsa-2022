@@ -1,12 +1,10 @@
-package Unit15InstructionExamples;//(c) A+ Computer Science
-//www.apluscompsci.com
-//Name -
+
 
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Canvas;
 
-/*public class BlockTestTwo extends Canvas
+public class BlockTestTwo extends Canvas
 {
 	public BlockTestTwo()
 	{
@@ -31,4 +29,4 @@ import java.awt.Canvas;
 		
 		//add more test cases			
 	}
-}*/
+}

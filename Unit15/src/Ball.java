@@ -34,16 +34,12 @@ public class Ball extends Block
 	
 	
 	
-	
-	
-	
-	
-	
-	
 	   
    //add the set methods
 	
-	//m: another method here
+	public void setXSpeed(int xSpd) {
+		xSpeed=xSpd;
+	}
 	
 	public void setYSpeed(int ySpd) {
 		ySpeed=ySpd;
@@ -71,12 +67,21 @@ public class Ball extends Block
 			return true;
 		return false;
 
-
-
-		return false;
 	}   
 
    //add the get methods
+	
+	public int getXSpeed() {
+		return xSpeed;
+	}
+	
+	public int getYSpeed() {
+		return ySpeed;
+	}
 
    //add a toString() method
+	public String toString() {
+		return getX() + " " + getY() + " " + getWidth() + " " + getHeight() + " " + getColor() + " " + xSpeed + " " + ySpeed;
+	}
+	
 }
