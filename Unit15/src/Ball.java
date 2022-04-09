@@ -31,8 +31,15 @@ public class Ball extends Block
 		ySpeed=1;
 	}
 	
+	public Ball(int x, int y, int wid, int ht, Color c) {
+		super(x,y,wid,ht,c);
+	}
 	
-	
+	public Ball(int x, int y, int wid, int ht, Color c, int xSpeed, int ySpeed) {
+		super(x,y,wid,ht,c);
+		setXSpeed(xSpeed);
+		setYSpeed(ySpeed);
+	}
 	
 	   
    //add the set methods

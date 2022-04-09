@@ -17,10 +17,10 @@ class BallTestTwo extends Canvas implements Runnable
 		setVisible(true);
 
 		//instantiate a new Ball
-
+		ball = new Ball();
 
 		//test the Ball thoroughly
-		
+		ball = new Ball(100,350,10,10,Color.RED);
 
 		//test all constructors
 
