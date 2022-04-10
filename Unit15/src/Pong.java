@@ -65,6 +65,13 @@ public class Pong extends Canvas implements KeyListener, Runnable
 		leftPaddle.draw(graphToBack);
 		rightPaddle.draw(graphToBack);
 
+		graphToBack.setColor(Color.RED);
+		//graphToBack.fillRect(440, 520, 80, 80);
+		//m: not done
+		
+		graphToBack.drawString("Left Score: " + leftScore, 10, 10);
+		
+		graphToBack.drawString("Right Score: " + rightScore, 700, 10);
 
 		//see if ball hits left wall or right wall
 		if(!(ball.getX()>=10 && ball.getX()<=780))
@@ -74,21 +81,22 @@ public class Pong extends Canvas implements KeyListener, Runnable
 			
 			if(ball.getX()<=10)
 				rightScore++;
+				ball.setXSpeed(-2);
+				ball.setYSpeed(1);
 			if(ball.getX()>=780)
 				leftScore++;
+				ball.setXSpeed(-2);
+				ball.setYSpeed(1);
 			
 			ball.draw(graphToBack,Color.WHITE);
 			ball.setX((int)(Math.random()*50)+400);
 			ball.setY((int)(Math.random()*50)+300);
 			//m: not finished yet
+			
+			//text boxes to print messages on canvas
+			
+			
 		}
-		
-		//text boxes to print messages on canvas
-		graphToBack.setColor(Color.RED);
-		//graphToBack.fillRect(440, 520, 80, 80);
-		//m: not done
-		graphToBack.drawString("Left Score: " + leftScore, 10, 10);
-		graphToBack.drawString("Right Score: " + rightScore, 700, 10);
 		
 		
 		//see if the ball hits the top or bottom wall 
@@ -122,7 +130,6 @@ public class Pong extends Canvas implements KeyListener, Runnable
 		if (keys[2]==true) {
 			rightPaddle.moveUpAndDraw(graphToBack);
 		}
-		//m: not done
 		if (keys[3]==true) {
 			rightPaddle.moveDownAndDraw(graphToBack);
 		}
