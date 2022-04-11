@@ -27,7 +27,7 @@ public class Pong extends Canvas implements KeyListener, Runnable
 	public Pong()
 	{
 		//set up all variables related to the game
-		ball = new Ball(10,100,10,10,Color.blue,2,1);
+		ball = new BlinkyBall(10,100,10,10,Color.blue,2,1);
 		leftPaddle = new Paddle(20,200,10,40,Color.orange,2);
 		rightPaddle = new Paddle(760,200,10,40,Color.orange,2);
 		keys = new boolean[4];
@@ -68,11 +68,10 @@ public class Pong extends Canvas implements KeyListener, Runnable
 		rightPaddle.draw(graphToBack);
 
 		graphToBack.setColor(Color.WHITE);
-		graphToBack.fillRect(440, 520, 80, 80);
+		graphToBack.fillRect(440, 520, 180, 80);
 		
 		graphToBack.setColor(Color.RED);
-		//graphToBack.drawString("Left Score: " + leftScore, 10, 10);
-		//graphToBack.drawString("Right Score: " + rightScore, 700, 10);
+		
 		graphToBack.drawString("Left Score: " + leftScore, 440, 530);
 		graphToBack.drawString("Right Score: " + rightScore, 440, 550);
 
@@ -84,12 +83,12 @@ public class Pong extends Canvas implements KeyListener, Runnable
 			
 			if(ball.getX()<=10)
 				rightScore++;
-				ball.setXSpeed(-2);
-				ball.setYSpeed(1);
+				ball.setXSpeed((int)Math.random()+1);
+				ball.setYSpeed((int)Math.random()+1);
 			if(ball.getX()>=780)
 				leftScore++;
-				ball.setXSpeed(-2);
-				ball.setYSpeed(1);
+				ball.setXSpeed((int)Math.random()+1);
+				ball.setYSpeed((int)Math.random()+1);
 			
 			ball.draw(graphToBack,Color.WHITE);
 			ball.setX((int)(Math.random()*50)+400);
@@ -136,9 +135,6 @@ public class Pong extends Canvas implements KeyListener, Runnable
 		if (keys[3]==true) {
 			rightPaddle.moveDownAndDraw(graphToBack);
 		}
-
-
-
 
 
 		
