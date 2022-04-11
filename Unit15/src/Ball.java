@@ -9,9 +9,6 @@ public class Ball extends Block
 {
 	private int xSpeed;
 	private int ySpeed;
-	private Ball ball;
-	private Paddle leftPaddle = new Paddle(20,200,10,40,Color.orange,2);
-	private Paddle rightPaddle = new Paddle(760,200,10,40,Color.orange,2);
 
 	public Ball()
 	{
@@ -61,6 +58,7 @@ public class Ball extends Block
 		ySpeed=ySpd;
 	}
    
+	
 
    public void moveAndDraw(Graphics window)
    {
@@ -94,24 +92,6 @@ public class Ball extends Block
 	public int getYSpeed() {
 		return ySpeed;
 	}
-	
-	
-	/*public boolean didCollideLeft(Object obj) {
-		 return ball.getX()<=leftPaddle.getX()+leftPaddle.getWidth() && ((leftPaddle.getY()<=ball.getY()) && (ball.getY()<=leftPaddle.getY()+leftPaddle.getHeight()));        
-	}
-	
-	public boolean didCollideRight(Object obj) {
-		return ball.getX()>=rightPaddle.getX()-rightPaddle.getWidth() && ((rightPaddle.getY()<=ball.getY()) && (ball.getY()<=rightPaddle.getY()+rightPaddle.getY()+rightPaddle.getHeight()));
-	}
-
-	public boolean didCollideTop(Object obj) {
-		return ball.getY()>=600;
-	}
-	
-	public boolean didCollideBottom(Object obj) {
-		return ball.getY()<=0;
-	}*/
-	
 	
 
    //add a toString() method

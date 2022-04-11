@@ -66,6 +66,8 @@ class SpeedUpBall extends Ball
 
    }
    
+   
+   
    public void increaseSpeed(int spd) {
 	   ball = new Ball(10,100,10,10,Color.blue,2,1);
 	   leftPaddle = new Paddle(20,200,10,40,Color.orange,2);
@@ -81,6 +83,19 @@ class SpeedUpBall extends Ball
 			xSpeed++;
 			ySpeed++;
 		}
+   }
+   
+   public int getXSpeed( int xSpd )
+   {
+	   return xSpeed;
+   }
+
+   public int getYSpeed( int ySpd )
+   {
+
+	   return ySpeed;
+
+
    }
 }
 

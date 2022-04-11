@@ -61,6 +61,8 @@ public class Pong extends Canvas implements KeyListener, Runnable
 		//we will draw all changes on the background image
 		Graphics graphToBack = back.createGraphics();
 
+		//ball.moveAndDraw(graphToBack);
+		
 		ball.moveAndDraw(graphToBack);
 		leftPaddle.draw(graphToBack);
 		rightPaddle.draw(graphToBack);
@@ -94,7 +96,7 @@ public class Pong extends Canvas implements KeyListener, Runnable
 			ball.setY((int)(Math.random()*50)+300);
 			
 			
-			//text boxes to print messages on canvas
+			
 			
 			
 		}
