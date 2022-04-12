@@ -27,7 +27,7 @@ public class Pong extends Canvas implements KeyListener, Runnable
 	public Pong()
 	{
 		//set up all variables related to the game
-		ball = new BlinkyBall(10,100,10,10,Color.blue,2,1);
+		ball = new Ball(10,100,10,10,Color.blue,2,1);
 		leftPaddle = new Paddle(20,200,10,40,Color.orange,2);
 		rightPaddle = new Paddle(760,200,10,40,Color.orange,2);
 		keys = new boolean[4];
@@ -83,12 +83,12 @@ public class Pong extends Canvas implements KeyListener, Runnable
 			
 			if(ball.getX()<=10)
 				rightScore++;
-				ball.setXSpeed((int)Math.random()+1);
-				ball.setYSpeed((int)Math.random()+1);
+				ball.setXSpeed((int)Math.random()+1-((int)Math.random()*100));
+				ball.setYSpeed((int)Math.random()+1-((int)Math.random()*5));
 			if(ball.getX()>=780)
 				leftScore++;
-				ball.setXSpeed((int)Math.random()+1);
-				ball.setYSpeed((int)Math.random()+1);
+				ball.setXSpeed((int)Math.random()+1-((int)Math.random()*100));
+				ball.setYSpeed((int)Math.random()+1-((int)Math.random()*5));
 			
 			ball.draw(graphToBack,Color.WHITE);
 			ball.setX((int)(Math.random()*50)+400);
