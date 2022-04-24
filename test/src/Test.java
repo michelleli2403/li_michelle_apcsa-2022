@@ -6,6 +6,6 @@ public class Test {
 		int one =8;
 		int two=7;
 		
-		System.out.println("8&7=="+(one&two));
+		System.out.println(one<<2);
 	}
 }
