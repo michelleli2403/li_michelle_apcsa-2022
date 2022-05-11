@@ -51,12 +51,17 @@ public class Alien extends MovingThing
 
 	public int getSpeed()
 	{
-	   return 0;
+	   return speed;
 	}
 
    public void move(String direction)
 	{
 	   //add code here
+	   if (getX() > StarFighter.WIDTH || getX() < 20) {
+		   speed=-speed;
+		   setY(getY()+25);
+	   }
+	   setX(getX()+getSpeed());
 	}
 
 	public void draw( Graphics window )
@@ -66,6 +71,6 @@ public class Alien extends MovingThing
 
 	public String toString()
 	{
-		return "";
+		return super.toString()+new StarFighter();
 	}
 }
