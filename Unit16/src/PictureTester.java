@@ -39,7 +39,7 @@ public class PictureTester
   /** Method to test the collage method */
   public static void testCollage()
   {
-    Picture canvas = new Picture("src/images640x480.jpg");
+    Picture canvas = new Picture("src/images/640x480.jpg");
     canvas.createCollage();
     canvas.explore();
   }
@@ -48,6 +48,7 @@ public class PictureTester
   public static void testEdgeDetection()
   {
     Picture swan = new Picture("src/images/swan.jpg");
+    swan.explore();
     swan.edgeDetection(10);
     swan.explore();
   }
@@ -122,6 +123,23 @@ public class PictureTester
 	  gull.explore();
   }
   
+  public static void testCopy() {
+	  Picture gull = new Picture("src/images/seagull.jpg");
+	  gull.explore();
+	  //gull.copy(gull,10,50);
+	  gull.copy(gull,70,70,120,120,20,20);
+	  gull.explore();
+
+  }
+  
+  public static void testMyCollage()
+  {
+    Picture canvas = new Picture("src/images/640x480.jpg");
+    canvas.explore();
+    canvas.myCollage();
+    canvas.explore();
+  }
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -143,7 +161,7 @@ public class PictureTester
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
-    //testEdgeDetection();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
@@ -161,6 +179,7 @@ public class PictureTester
 	  //testMirrorHorizontalBotToTop();
 	  //testMirrorDiagonal();
 	  //testMirrorArms();
-	  testMirrorGull();
+	  //testMirrorGull();
+	  //testMyCollage();
   }
 }
