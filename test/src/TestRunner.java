@@ -2,9 +2,9 @@ public class TestRunner
 {
 	public static void main(String[] args) {
 		
-		String a = "aplus rocks";
-		a.replaceAll("s","-");
-		System.out.println(a);
+		String s = "hi";
+		s=s.substring(2);
+		System.out.println(s);
 
 	}
 }
