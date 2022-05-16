@@ -56,6 +56,7 @@ public class PictureTester
   //method to test keepOnlyBlue
   public static void testKeepOnlyBlue() {
 	  Picture gorge = new Picture("src/images/gorge.jpg");
+	  gorge.explore();
 	  gorge.keepOnlyBlue();
 	  gorge.explore();
   }
@@ -161,7 +162,7 @@ public class PictureTester
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
-    testEdgeDetection();
+    //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
@@ -180,6 +181,6 @@ public class PictureTester
 	  //testMirrorDiagonal();
 	  //testMirrorArms();
 	  //testMirrorGull();
-	  //testMyCollage();
+	  testMyCollage();
   }
 }
