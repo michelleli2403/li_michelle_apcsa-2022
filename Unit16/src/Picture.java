@@ -469,5 +469,27 @@ public class Picture extends SimplePicture {
 		this.mirrorVertical();
 		this.write("src/images/collage.jpg");
 	}
+	
+	public void backgroundSwap(Picture newBackground) {
+		System.out.println("Michelle Li, Computer #17, 5/17/22");
+		
+		Pixel[][] pixels = this.getPixels2D();
+		Pixel[][] moonPixels = newBackground.getPixels2D();
+		
+		for (int i=0; i<pixels.length; i++) {
+			for (int j=0; j<pixels[0].length; j++) {
+				if (pixels[i][j].getRed() < pixels[i][j].getBlue() && pixels[i][j].getGreen() < pixels[i][j].getBlue()) {
+					pixels[i][j].setColor(moonPixels[i][j].getColor());
+				}
+			}
+		}
+		
+		for (int r=364; r<381; r++) {
+			for (int c=359; c<403; c++) {
+				pixels[r][c].setColor(pixels[358][340].getColor());
+			}
+		}
+		
+	}
 
 } // this } is the end of class Picture, put all new methods before this

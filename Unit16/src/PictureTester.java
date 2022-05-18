@@ -149,6 +149,17 @@ public class PictureTester
     swan.explore();
   }
   
+  public static void testBackgroundSwap()
+  {
+	  Picture mark = new Picture("src/images/blue-mark.jpg");
+	  Picture moon = new Picture("src/images/moon-surface.jpg");
+	  mark.explore();
+	  mark.backgroundSwap(moon); //replace blue pixels in mark with pixels in moon
+	  //replace pixels containing the logo on the t-shirt
+	
+	  mark.explore();
+  }
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -170,8 +181,8 @@ public class PictureTester
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
-    testEdgeDetection();
-    testEdgeDetection2();
+    //testEdgeDetection();
+    //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
@@ -190,5 +201,6 @@ public class PictureTester
 	  //testMirrorArms();
 	  //testMirrorGull();
 	  //testMyCollage();
+	  testBackgroundSwap();
   }
 }
