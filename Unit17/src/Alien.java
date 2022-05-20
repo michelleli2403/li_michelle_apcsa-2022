@@ -22,11 +22,14 @@ public class Alien extends MovingThing
 	public Alien(int x, int y)
 	{
 		//add code here
+		super(x,y);
 	}
 
 	public Alien(int x, int y, int s)
 	{
 		//add code here
+		super(x,y);
+		speed=s;
 	}
 
 	public Alien(int x, int y, int w, int h, int s)
@@ -47,6 +50,7 @@ public class Alien extends MovingThing
 	public void setSpeed(int s)
 	{
 	   //add code
+		speed=s;
 	}
 
 	public int getSpeed()
@@ -57,10 +61,10 @@ public class Alien extends MovingThing
    public void move(String direction)
 	{
 	   //add code here
-	   if (getX() > StarFighter.WIDTH || getX() < 20) {
+	   /*if (getX() > StarFighter.WIDTH || getX() < 20) {
 		   speed=-speed;
 		   setY(getY()+25);
-	   }
+	   }*/
 	   setX(getX()+getSpeed());
 	}
 

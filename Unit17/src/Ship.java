@@ -22,11 +22,14 @@ public class Ship extends MovingThing
 	public Ship(int x, int y)
 	{
 	   //add code here
+		super(x,y);
 	}
 
 	public Ship(int x, int y, int s)
 	{
 	   //add code here
+		super(x,y);
+		setSpeed(s);
 	}
 
 	public Ship(int x, int y, int w, int h, int s)
@@ -48,6 +51,7 @@ public class Ship extends MovingThing
 	public void setSpeed(int s)
 	{
 	   //add more code
+		speed=s;
 	}
 
 	public int getSpeed()
@@ -58,6 +62,7 @@ public class Ship extends MovingThing
 	public void move(String direction)
 	{
 		//add code here
+		setX(getX()+getSpeed());
 	}
 
 	public void draw( Graphics window )

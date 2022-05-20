@@ -20,11 +20,11 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 	private Alien alienOne;
 	private Alien alienTwo;
 
-	/* uncomment once you are ready for this part
-	 *
+	/* uncomment once you are ready for this part*/
+	 
    private AlienHorde horde;
 	private Bullets shots;
-	*/
+	
 
 	private boolean[] keys;
 	private BufferedImage back;
@@ -37,6 +37,8 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 
 		//instantiate other instance variables
 		//Ship, Alien
+		Ship s = new Ship();
+		Alien a = new Alien();
 
 		this.addKeyListener(this);
 		new Thread(this).start();
@@ -74,6 +76,15 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 		}
 
 		//add code to move Ship, Alien, etc.
+		if(keys[1]) {
+			ship.move("RIGHT");
+		}
+		if(keys[2]) {
+			ship.move("UP");
+		}
+		if(keys[3]) {
+			ship.move("DOWN");
+		}
 
 
 		//add in collision detection to see if Bullets hit the Aliens and if Bullets hit the Ship
