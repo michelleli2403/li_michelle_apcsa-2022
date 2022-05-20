@@ -16,6 +16,7 @@ public class AlienHorde
 
 	public AlienHorde(int size)
 	{
+		
 	}
 
 	public void add(Alien al)
