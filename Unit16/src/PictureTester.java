@@ -160,6 +160,22 @@ public class PictureTester
 	  mark.explore();
   }
   
+  public static void testEncode() {
+	  Picture beach = new Picture("src/images/beach.jpg");
+	  Picture msg = new Picture("src/images/msg.jpg");
+	  beach.explore();
+	  beach.encode(msg);
+	  beach.explore();
+  }
+  
+  public static void testDecode() {
+	  Picture beach = new Picture("src/images/beach.jpg");
+	  Picture msg = new Picture("src/images/msg.jpg");
+	  beach.explore();
+	  msg.decode();
+	  beach.explore();
+  }
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -201,6 +217,8 @@ public class PictureTester
 	  //testMirrorArms();
 	  //testMirrorGull();
 	  //testMyCollage();
-	  testBackgroundSwap();
+	  //testBackgroundSwap();
+	  //testEncode();
+	  testDecode();
   }
 }
