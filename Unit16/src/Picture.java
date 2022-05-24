@@ -500,7 +500,7 @@ public class Picture extends SimplePicture {
 		Pixel currPixel = null;
 		Pixel messagePixel = null;
 		int count = 0;
-		for (int row = 0; row < this.getHeight(); row++) {
+		/*for (int row = 0; row < this.getHeight(); row++) {
 			for (int col = 0; col < this.getWidth(); col++) {
 				// if the current pixel red is odd make it even
 				currPixel = currPixels[row][col];
@@ -512,14 +512,16 @@ public class Picture extends SimplePicture {
 					count++;
 				}
 			}
-		}
+		}*/
+		
 		int random=0;
 		int sum=0;
-		/*for (int row = 0; row < this.getHeight(); row++) {
+		for (int row = 0; row < this.getHeight(); row++) {
 			for (int col = 0; col < this.getWidth(); col++) {
 				currPixel = currPixels[row][col];
 				sum=currPixel.getRed()+currPixel.getBlue();
-				if (sum%2==1) {
+				System.out.println(sum);
+				/*if (sum%2==1) {
 					random = (int) (Math.random()*2);
 					if (random==0) {
 						while (sum%4 != 0) {
@@ -540,9 +542,9 @@ public class Picture extends SimplePicture {
 					else if (random==1 && currPixel.getBlue()%4 == 0) {
 						currPixel.setBlue(currPixel.getBlue()+1);
 					}
-				}
+				}*/
 			}
-		}*/
+		}
 	}
 
 	/**
@@ -560,7 +562,7 @@ public class Picture extends SimplePicture {
 		Picture messagePicture = new Picture(height, width);
 		Pixel[][] messagePixels = messagePicture.getPixels2D();
 		int count = 0;
-		for (int row = 0; row < this.getHeight(); row++) {
+		/*for (int row = 0; row < this.getHeight(); row++) {
 			for (int col = 0; col < this.getWidth(); col++) {
 				currPixel = pixels[row][col];
 				messagePixel = messagePixels[row][col];
@@ -570,9 +572,9 @@ public class Picture extends SimplePicture {
 				}
 			}
 		}
-		System.out.println(count);
+		System.out.println(count);*/
 		
-		/*int sum=0;
+		int sum=0;
 		for (int row = 0; row < this.getHeight(); row++) {
 			for (int col = 0; col < this.getWidth(); col++) {
 				sum=currPixel.getRed()+currPixel.getBlue();
@@ -583,7 +585,7 @@ public class Picture extends SimplePicture {
 					count++;
 				}
 			}
-		}*/
+		}
 		
 		
 		
