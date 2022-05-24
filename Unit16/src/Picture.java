@@ -520,8 +520,7 @@ public class Picture extends SimplePicture {
 			for (int col = 0; col < this.getWidth(); col++) {
 				currPixel = currPixels[row][col];
 				sum=currPixel.getRed()+currPixel.getBlue();
-				System.out.println(sum);
-				/*if (sum%2==1) {
+				if (sum%2==1) {
 					random = (int) (Math.random()*2);
 					if (random==0) {
 						while (sum%4 != 0) {
@@ -542,7 +541,7 @@ public class Picture extends SimplePicture {
 					else if (random==1 && currPixel.getBlue()%4 == 0) {
 						currPixel.setBlue(currPixel.getBlue()+1);
 					}
-				}*/
+				}
 			}
 		}
 	}
