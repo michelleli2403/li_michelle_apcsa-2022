@@ -160,20 +160,13 @@ public class PictureTester
 	  mark.explore();
   }
   
-  public static void testEncode() {
-	  Picture beach = new Picture("src/images/beach.jpg");
+  public static void testEncodeAndDecode() {
+	  Picture beach = new Picture("src/images/kitten2.jpg");
 	  Picture msg = new Picture("src/images/msg.jpg");
 	  beach.explore();
 	  beach.encode(msg);
 	  beach.explore();
-  }
-  
-  public static void testDecode() {
-	  Picture beach = new Picture("src/images/beach.jpg");
-	  Picture msg = new Picture("src/images/msg.jpg");
-	  beach.explore();
-	  beach.decode();
-	  beach.explore();
+	  beach.decode().explore();
   }
   
   /** Main method for testing.  Every class can have a main
@@ -218,7 +211,7 @@ public class PictureTester
 	  //testMirrorGull();
 	  //testMyCollage();
 	  //testBackgroundSwap();
-	  //testEncode();
-	  testDecode();
+	  testEncodeAndDecode();
+	  //testDecode();
   }
 }
