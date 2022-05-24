@@ -161,7 +161,7 @@ public class PictureTester
   }
   
   public static void testEncodeAndDecode() {
-	  Picture beach = new Picture("src/images/kitten2.jpg");
+	  Picture beach = new Picture("src/images/beach.jpg");
 	  Picture msg = new Picture("src/images/msg.jpg");
 	  beach.explore();
 	  beach.encode(msg);

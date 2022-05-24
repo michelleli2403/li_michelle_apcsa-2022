@@ -513,7 +513,36 @@ public class Picture extends SimplePicture {
 				}
 			}
 		}
-		System.out.println(count);
+		int random=0;
+		int sum=0;
+		/*for (int row = 0; row < this.getHeight(); row++) {
+			for (int col = 0; col < this.getWidth(); col++) {
+				currPixel = currPixels[row][col];
+				sum=currPixel.getRed()+currPixel.getBlue();
+				if (sum%2==1) {
+					random = (int) (Math.random()*2);
+					if (random==0) {
+						while (sum%4 != 0) {
+							currPixel.setRed(currPixel.getRed()+1);
+						}
+					}
+					else {
+						while (sum%4 != 0) {
+							currPixel.setBlue(currPixel.getBlue()+1);
+						}
+					}
+				}
+				messagePixel = messagePixels[row][col];
+				if (messagePixel.colorDistance(Color.BLACK) < 50) {
+					if (random==0 && currPixel.getRed()%4 == 0) {
+						currPixel.setRed(currPixel.getRed()+1);
+					}
+					else if (random==1 && currPixel.getBlue()%4 == 0) {
+						currPixel.setBlue(currPixel.getBlue()+1);
+					}
+				}
+			}
+		}*/
 	}
 
 	/**
@@ -542,6 +571,23 @@ public class Picture extends SimplePicture {
 			}
 		}
 		System.out.println(count);
+		
+		/*int sum=0;
+		for (int row = 0; row < this.getHeight(); row++) {
+			for (int col = 0; col < this.getWidth(); col++) {
+				sum=currPixel.getRed()+currPixel.getBlue();
+				currPixel = pixels[row][col];
+				messagePixel = messagePixels[row][col];
+				if (sum%4 != 0) {
+					messagePixel.setColor(Color.BLACK);
+					count++;
+				}
+			}
+		}*/
+		
+		
+		
+		
 		return messagePicture;
 	}
 
