@@ -514,11 +514,8 @@ public class Picture extends SimplePicture {
 
 		}
 	}
-	/**
-	 * Method to decode a message hidden in the red value of the current picture
-	 * 
-	 * @return the picture with the hidden message
-	 */
+
+
 	public Picture decode() {
 		Pixel[][] pixels = this.getPixels2D();
 		int height = this.getHeight();
