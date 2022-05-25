@@ -486,66 +486,34 @@ public class Picture extends SimplePicture {
 			}
 		}
 
-	}
+	}	
 
-	/**
-	 * Hide a black and white message in the current picture by changing the red to
-	 * even and then setting it to odd if the message pixel is black
-	 * 
-	 * @param messagePict the picture with a message
-	 */
 	public void encode(Picture messagePict) {
 		Pixel[][] messagePixels = messagePict.getPixels2D();
 		Pixel[][] currPixels = this.getPixels2D();
 		Pixel currPixel = null;
 		Pixel messagePixel = null;
-		int count = 0;
-		/*for (int row = 0; row < this.getHeight(); row++) {
-			for (int col = 0; col < this.getWidth(); col++) {
-				// if the current pixel red is odd make it even
-				currPixel = currPixels[row][col];
-				if (currPixel.getRed() % 2 == 1)
-					currPixel.setRed(currPixel.getRed() - 1);
-				messagePixel = messagePixels[row][col];
-				if (messagePixel.colorDistance(Color.BLACK) < 50) {
-					currPixel.setRed(currPixel.getRed() + 1);
-					count++;
-				}
-			}
-		}*/
-		
-		int random=0;
-		int sum=0;
+
 		for (int row = 0; row < this.getHeight(); row++) {
 			for (int col = 0; col < this.getWidth(); col++) {
 				currPixel = currPixels[row][col];
-				sum=currPixel.getRed()+currPixel.getBlue();
-				if (sum%2==1) {
-					random = (int) (Math.random()*2);
-					if (random==0) {
-						while (sum%4 != 0) {
-							currPixel.setRed(currPixel.getRed()+1);
-						}
-					}
-					else {
-						while (sum%4 != 0) {
-							currPixel.setBlue(currPixel.getBlue()+1);
-						}
-					}
-				}
 				messagePixel = messagePixels[row][col];
+				int lastR = currPixel.getRed() % 10;
+				int lastB = currPixel.getBlue() % 10;
+				
+				int avg = (lastR + lastB) / 2;
+
+				currPixel.setRed(currPixel.getRed() - currPixel.getRed() % 10 + avg);
+				currPixel.setBlue(currPixel.getBlue() - currPixel.getBlue()%10 + avg);
+
 				if (messagePixel.colorDistance(Color.BLACK) < 50) {
-					if (random==0 && currPixel.getRed()%4 == 0) {
-						currPixel.setRed(currPixel.getRed()+1);
-					}
-					else if (random==1 && currPixel.getBlue()%4 == 0) {
-						currPixel.setBlue(currPixel.getBlue()+1);
-					}
+					currPixel.setRed(currPixel.getRed() - currPixel.getRed() % 10 + avg);
+					currPixel.setBlue(currPixel.getBlue() - currPixel.getBlue() % 10 + (avg+1)%10);
 				}
 			}
+
 		}
 	}
-
 	/**
 	 * Method to decode a message hidden in the red value of the current picture
 	 * 
@@ -560,35 +528,22 @@ public class Picture extends SimplePicture {
 		Pixel messagePixel = null;
 		Picture messagePicture = new Picture(height, width);
 		Pixel[][] messagePixels = messagePicture.getPixels2D();
-		int count = 0;
-		/*for (int row = 0; row < this.getHeight(); row++) {
-			for (int col = 0; col < this.getWidth(); col++) {
-				currPixel = pixels[row][col];
-				messagePixel = messagePixels[row][col];
-				if (currPixel.getRed() % 2 == 1) {
-					messagePixel.setColor(Color.BLACK);
-					count++;
-				}
-			}
-		}
-		System.out.println(count);*/
-		
-		int sum=0;
+
 		for (int row = 0; row < this.getHeight(); row++) {
 			for (int col = 0; col < this.getWidth(); col++) {
-				sum=currPixel.getRed()+currPixel.getBlue();
 				currPixel = pixels[row][col];
 				messagePixel = messagePixels[row][col];
-				if (sum%4 != 0) {
+
+				int lastR = currPixel.getRed() % 10;
+				int lastB = currPixel.getBlue() % 10;
+				
+				if (lastB == (lastR+1)%10) {
 					messagePixel.setColor(Color.BLACK);
-					count++;
+
 				}
 			}
 		}
-		
-		
-		
-		
+
 		return messagePicture;
 	}
 
