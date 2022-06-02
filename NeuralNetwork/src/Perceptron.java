@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class Perceptron {
 	
-	private int[] weights;
+	private double[] weights;
 	private int[] inputs;
 	private int bias;
 	private int threshold;
@@ -11,16 +11,16 @@ public class Perceptron {
 	public Perceptron(int inputs, int threshold, int learningRate) {
 		this.threshold=threshold;
 		this.learningRate=learningRate;
-		weights = new int[inputs];
+		weights = new double[inputs];
 		bias=0;
 		System.out.println("Initial weights: " + Arrays.toString(weights));
 		System.out.println("Initial bias: " + bias);
 		System.out.println("Threshold: " + this.threshold);
-		System.out.println("Learning rate: " + this.learningRate);
+		System.out.println("Learning rate: " + this.learningRate + "\n");
 	}
 	
 	public int predict(int[] inputs) {
-		int z = 0;
+		double z = 0;
 		int activation = 0;
 		for (int i=0; i<weights.length; i++) {
 			z += inputs[i] * weights[i];
@@ -38,15 +38,45 @@ public class Perceptron {
 		return activation;
 	}
 	
-	public void train() {
+	public void train(int[][] trainingInputs, int[] labels) {
 		int yhat=0;
-		int labels=0;
 		for (int i=0; i<threshold; i++) {
 			System.out.println("---------Training Iteration: " + i + "-----------");
-			for (int j=0; j<inputs.length; j++) {
-				
+			for (int j=0; j<trainingInputs[0].length; j++) {
+				System.out.println("Current inputs, weights, bias: " + Arrays.toString(trainingInputs[j]) + " " + Arrays.toString(weights) + " " + bias);
+				yhat=predict(labels);
+				System.out.println("Activation(yhat) = " + yhat);
+				int error = labels[j] - yhat;
+				System.out.println("Error = " + labels[j] + "-" + yhat + "=" + error);
+				weights[j]+=learningRate*error;
+				bias+=learningRate*error;
+				System.out.println("Updated Weights: " + Arrays.toString(weights));
+				System.out.println("Updated Bias: " + bias + "\n");
 			}
-			yhat=predict(inputs);
 		}
+	}
+	
+	public static void main(String[] args) {
+		int[][] inputMatrix = new int[4][2];
+		
+		int[] labels = new int[] {1,0,0,0};
+		inputMatrix[0][0]=1;
+		inputMatrix[0][1]=1;
+		inputMatrix[1][0]=1;
+		inputMatrix[1][1]=0;
+		inputMatrix[2][0]=0;
+		inputMatrix[2][1]=1;
+		inputMatrix[3][0]=0;
+		inputMatrix[3][1]=0;
+		
+		Perceptron perceptron = new Perceptron(2,10,1);
+		perceptron.train(inputMatrix, labels);
+		
+		int a=1;
+		int b=1;
+		int[] inputs = new int[] {a,b};
+		System.out.println("--------- Input ---------"+Arrays.toString(inputs));
+		int output=perceptron.predict(inputs);
+		System.out.println("--------- Output --------"+output);
 	}
 }
